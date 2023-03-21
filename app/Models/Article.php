@@ -12,6 +12,10 @@ class Article extends Model
         'name',
         'price',
         'body',
-        
+        'category_id',
     ];
+
+    public function category(){
+        $this->belongsTo(Category::class);
+    }
 }
