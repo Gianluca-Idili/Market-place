@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth')->except('index');
+    }
+
+        
+
     /**
      * Display a listing of the resource.
      */
@@ -28,10 +34,10 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function store(Request $request)
+    // {
+    //     //
+    // }
 
     /**
      * Display the specified resource.

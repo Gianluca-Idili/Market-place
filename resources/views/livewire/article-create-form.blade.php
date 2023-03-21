@@ -15,15 +15,16 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="category_id" class="form-label">Categorie</label>
-                    <select wire:model="category_id" id="category_id">
-                                @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">
-                                        {{ $category->name }}
-                                    </option>
-                                @endforeach
-                    </select>
+            <label>Categoria</label>
+            <select wire:model="category_id" id="category_id">
+                <option value="">Seleziona una categoria</option>
+                @foreach($categories as $id => $name)
+                    <option value="{{ $id }}">{{ $name }}</option>
+                @endforeach
+            </select>
+            @error('category_id') <span class="error">{{ $message }}</span> @enderror
         </div>
+        
         <div class="mb-3">
             <label for="price" class="form-label">prezzo</label>
             <input type="double" wire:model="price" class="form-control @error("price") is-invalid @enderror" id="price">

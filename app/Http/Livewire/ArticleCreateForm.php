@@ -12,9 +12,10 @@ class ArticleCreateForm extends Component
     protected $rules = [
         'name' =>'required|min:4',
         'body' =>'required|min:10',
-        'price' =>'required'
+        'price' =>'required',
+        'category_id' => 'required',
     ];
-    public $name, $price, $body, $article, $category_id, $category;
+    public $name, $price, $body, $article, $category_id, $categories;
 
     public function store(){
         $this->validate();
@@ -25,17 +26,22 @@ class ArticleCreateForm extends Component
             'body' => $this->body,
             'category_id'=> $this->category_id,
         ]);
+        
         session()->flash('articleCreated', 'hai creato corretamente l\'articolo');
         $this->reset();
     }
-    public function mount($category)
+
+    public function mount()
     {
-        $this->category = Category::all();
+        $this->categories = Category::pluck('name', 'id');
     }
+    
+
     public function render()
     { 
-        $this->category->articles;
-        return view('livewire.article-create-form');
+        return view('livewire.article-create-form', [
+            'categories' => $this->categories,
+        ]);           
     }
     
 }
