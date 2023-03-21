@@ -7,9 +7,15 @@ use Livewire\Component;
 
 class ArticleCreateForm extends Component
 {
+    protected $rules = [
+        'name' =>'required|min:4',
+        'body' =>'required|min:10',
+        'price' =>'required'
+    ];
     public $name, $price, $body, $article;
 
     public function store(){
+        $this->validate();
         $this->article = Article::create([
            'name' => $this->name,
            'price' => $this->price,
