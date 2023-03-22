@@ -34,7 +34,8 @@
                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
                           <span class="visually-hidden">Next</span>
                         </button>
-                      </div>
+                    </div>
+                    
                     <h3 class="mt-4 text-bold">{{$article->name}}</h3>
                     <p class="mb-1 text-bold text-italic">{{$article->price}} €</p> 
                     <p class="text-italic">{{ $article->body }}</p> 
