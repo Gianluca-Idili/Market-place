@@ -1,0 +1,27 @@
+:root{
+    --c-main:#14213D;
+    --c-second:#E5E5E5;
+    --c-accen: #FCA311;
+}
+
+.txtMain{
+    color: var(--c-main);
+  }
+  .txtAccent{
+    color: var(--c-accen);
+  }
+  .txtSecond{
+    color: var(--c-second);
+  }
+  .bgMain{
+    background-color: var(--c-main);
+  }
+  .bgAccent{
+    background-color: var(--c-accen);
+  }
+  .bgSecond{
+    background-color: var(--c-second);
+  }
+  
+
+
