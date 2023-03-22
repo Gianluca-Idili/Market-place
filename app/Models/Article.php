@@ -15,6 +15,7 @@ class Article extends Model
         'body',
         'category_id',
         'user_id',
+        'cover',
     ];
 
     public function category(){
