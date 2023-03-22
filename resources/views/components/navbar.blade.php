@@ -8,9 +8,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                {{-- <li class="nav-item">
-                    <a class="nav-link fs-5" href="{{ route('article.index') }}">Tutti gli articoli</a>
-                </li> --}}
+                <li class="nav-item">
+                    <a class="nav-link txtMain fs-5  " href="{{ route('article.index') }}">Tutti gli articoli</a>
+                </li>
                 
 
                   
@@ -33,7 +33,8 @@
                 <div class="nav-item dropdown me-3 fs-5">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                         {{ Auth::user()->name }}
+                         {{ Auth::user()->name }} 
+                         <img style="width:50px; border-radius:50%" class="mx-3" src="{{Storage::url(Auth::user()->avatar)}}" alt="">
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('user.profile') }}">Profilo</a></li>
@@ -49,3 +50,4 @@
         </div>
     </div>
 </nav>
+<x-menuCategory />

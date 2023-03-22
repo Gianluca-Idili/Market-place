@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-        <h1><strong>Registrati</strong></h1>
+      <h1 class="text-center mt-5">Registrati</h1>
     </x-header>
     <div class="container-fluid my-5">
         <div class="row justify-content-center">

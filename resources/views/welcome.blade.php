@@ -1,5 +1,5 @@
 <x-layout>
-    <x-menuCategory/>
+    {{-- <x-menuCategory/> --}}
   <x-header>
     <div class="container">
       <div class="row justify-content-center">

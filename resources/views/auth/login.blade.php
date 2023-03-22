@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-        <h1><strong>Accedi</strong></h1>
+        <h1 class="text-center mt-5">Accedi</h1>
     </x-header>
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
@@ -32,7 +32,9 @@
                         <label class="form-check-label" for="exampleCheck1">Ricordami</label>
                     </div>
                     <button type="submit" class="btn btn-primary">Accedi</button>
+                    <a class="btn btn-warning" href="{{ route('register') }}">Registrati</a>
                 </form>
+                
             </div>
         </div>
     </div>
