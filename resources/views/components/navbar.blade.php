@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-white mx-5 my-5 shadow">
+<nav class="navbar navbar-expand-lg bg-white mx-5 mt-5  mb-2 shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('homepage') }}"><img width="180"
                 src="\media\logo.png" alt=""></a>
@@ -8,25 +8,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link fs-5" href="{{ route('article.index') }}">Tutti gli articoli</a>
-                </li>
-                <li class="nav-item dropdown fs-5">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Categorie
-                    </a>
+                </li> --}}
+                
 
-                    <ul class="dropdown-menu">
-                        @foreach ($categories as $category)
-                            <li><a class="dropdown-item"
-                                    href=" {{ route('category.show', compact('category')) }}">{{ $category->name }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
+                  
             </ul>
             <div class="nav-item mx-4 fs-5">
-                <a class="nav-link active" aria-current="page" href="{{ route('article.create') }}">Inserisci articolo</a>
+                <a class="nav-link  btn-addArt" aria-current="page" href="{{ route('article.create') }}">Inserisci articolo</a>
             </div>
             @guest
                 <div class="nav-item dropdown me-3 fs-5">

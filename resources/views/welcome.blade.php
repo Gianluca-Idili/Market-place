@@ -1,12 +1,15 @@
 <x-layout>
-    <x-header>
+    <x-menuCategory>
+      
+    </x-menuCategory>
+  <x-header>
                     {{-- TITOLO HOME --}}
-                    <h1>Hello world!!</h1>
+                    {{-- <h1>Hello world!!</h1> --}}
     </x-header>
-<div class="container">
+<div class="container allArticles">
     <div class="row">
         <div class="col-12">
-            <p>Ecco  tutti gli annunci</p>
+            {{-- <p>Ecco  tutti gli annunci</p> --}}
             <div class="row">
                 @foreach($articles as $article)
                 <div class="col-12 col-md-4">

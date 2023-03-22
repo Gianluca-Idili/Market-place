@@ -18,16 +18,16 @@ return new class extends Migration
             $table->timestamps();
         });
         $categories = [
-            'auto',
-            'informatica',
-            'elettrodomestici',
-            'libri',
-            'giochi',
-            'console',
-            'telefoni',
-            'immobili',
-            'arredamento',
-            'abbigliamento',
+            'Auto',
+            'Informatica',
+            'Elettrodomestici',
+            'Libri',
+            'Giochi',
+            'Console',
+            'Telefoni',
+            'Immobili',
+            'Arredamento',
+            'Abbigliamento',
         ];
         foreach($categories as $category) {
             Category::create([
