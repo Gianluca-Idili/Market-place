@@ -27,8 +27,8 @@
             </select>
             @error('category_id') <span class="error">{{ $message }}</span> @enderror
         </div>
-        @if($cover)
-        <div class="mb-3">
+        {{-- @if($cover) --}}
+        {{-- <div class="mb-3">
                 Anteprima immagini:
                 <img src="{{$cover->temporaryUrl()}}" alt="">
         </div>
@@ -39,7 +39,7 @@
             @error('cover')
                 <span class="fst-italic text-danger small">{{$message}}</span>
             @enderror
-        </div>
+        </div> --}}
         <div class="mb-3">
             <label for="price" class="form-label">prezzo</label>
             <input type="double" wire:model="price" class="form-control @error("price") is-invalid @enderror" id="price">

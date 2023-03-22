@@ -17,6 +17,7 @@ use App\Http\Controllers\ArticleController;
 */
 //PublicController
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+Route::get('/categories/{category}', [PublicController::class, 'categoryShow'])->name('category.show');
 
 //ArticleController
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');

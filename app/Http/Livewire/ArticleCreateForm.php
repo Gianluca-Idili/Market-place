@@ -16,7 +16,7 @@ class ArticleCreateForm extends Component
         'body' =>'required|min:10',
         'price' =>'required',
         'category_id' => 'required',
-        'cover' =>'required',
+        // 'cover' =>'required',
     ];
     public $name, $price, $body, $article, $category_id, $categories,$cover;
 
@@ -28,7 +28,7 @@ class ArticleCreateForm extends Component
             'price' => $this->price,
             'body' => $this->body,
             'category_id'=> $this->category_id,
-            'cover'=>$this->cover->store('public/covers'),
+            // 'cover'=>$this->cover->store('public/covers'),
         ]);
         $this->clearForm();
         
@@ -42,7 +42,7 @@ class ArticleCreateForm extends Component
         $this->price = '';
         $this->body = '';
         $this->category_id = '';
-        $this->cover= '';
+        // $this->cover= '';
     }
 
     public function mount()
@@ -53,9 +53,7 @@ class ArticleCreateForm extends Component
 
     public function render()
     { 
-        return view('livewire.article-create-form', [
-            'categories' => $this->categories,
-        ]);           
+        return view('livewire.article-create-form');           
     }
     
 }
