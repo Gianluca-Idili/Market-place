@@ -18,7 +18,7 @@
             <label>Categoria</label>
             <select wire:model="category_id" id="category_id">
                 <option value="">Seleziona una categoria</option>
-                @foreach($categories as $id => $name)
+                @foreach($categories ?? [] as $id => $name)
                     <option value="{{ $id }}">{{ $name }}</option>
                 @endforeach
             </select>

@@ -33,7 +33,7 @@
                     Benvenuto {{Auth::user()->name}}
                       </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Profilo</a></li>
+                            <li><a class="dropdown-item" href="{{route('user.profile')}}">Profilo</a></li>
                             <li><a class="dropdown-item" href=""
                                     onclick="event.preventDefault();document.querySelector('#form-logout').submit()">Logout</a>
                             </li>

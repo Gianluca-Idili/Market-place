@@ -20,12 +20,13 @@ class ArticleCreateForm extends Component
     public function store(){
         $this->validate();
         
-        $this->article = Article::create([
+      $article = $this->article = Article::create([
             'name' => $this->name,
             'price' => $this->price,
             'body' => $this->body,
             'category_id'=> $this->category_id,
         ]);
+        Auth::user()->articles()->save($article);
         
         session()->flash('articleCreated', 'hai creato corretamente l\'articolo');
         $this->reset();

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 
@@ -19,5 +20,7 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 //ArticleController
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
-Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
-// Route::get('/', [PublicController::class, 'article.show'])->name('article.show');
+Route::get('/article/create', [ArticleController::class, 'create'])->middleware('auth')->name('article.create');
+
+//UserController
+Route::get('/user/profile', [UserController::class, 'profile'])->name('user.profile');
