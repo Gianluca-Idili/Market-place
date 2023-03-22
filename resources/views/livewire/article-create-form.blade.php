@@ -4,7 +4,7 @@
         {{session('articleCreated')}}
     </div>
     @endif
-    
+   
     <form wire:submit.prevent="store" class="shadow p-5">
         @csrf
         <div class="mb-3">
@@ -18,8 +18,11 @@
             <label>Categoria</label>
             <select wire:model="category_id" id="category_id">
                 <option value="">Seleziona una categoria</option>
-                @foreach($categories ?? [] as $id => $name)
-                    <option value="{{ $id }}">{{ $name }}</option>
+                
+                @foreach($categories as $category)
+                 
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    
                 @endforeach
             </select>
             @error('category_id') <span class="error">{{ $message }}</span> @enderror
@@ -43,8 +46,4 @@
         <button type="submit" class="btn btn-primary">crea</button>
     </form>
 </div>
-                {{-- @foreach ($article->categories as $category)
-                    <option value="{{ $category->id }}">
-                        {{$category->name}}
-                    </option>
-                @endforeach  --}}
+               
