@@ -19,7 +19,9 @@
                             <p class="text-italic">{{ $article->body }}</p> 
                             <p>Categorie: <a class="text-decoration-none text-bold" href="{{route('category.show', ['category'=>$article->category])}}">{{$article->category->name}}</a></p>
                             <p>Pubblicato il {{$article->created_at->format('d/m/Y')}}</p>
+                            <a class="btn btn-outline-dark ms-4 mb-5" href="{{route('article.show', ['article'=>$article])}}">vedi di più..</a>
                         </div> 
+                        
                         
                     </div>
                 </div>
