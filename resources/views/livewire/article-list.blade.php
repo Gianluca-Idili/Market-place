@@ -3,7 +3,7 @@
         @if(count($articles))
             @foreach($articles as $article)
             <div class="col-12 col-md-6 col-lg-4 mb-5">
-                <a class="text-decoration-none" href="#">
+                <a class="text-decoration-none" href="{{route('article.show', ['article'=>$article])}}">
                     <div class="main-pro bg-white shadow-card">
                         <div class="ms-4 p-3 bg-white text-black body-card"> 
                             <img src="http://picsum.photos//300" alt="immagine articolo">
@@ -11,7 +11,7 @@
                             <p class="mb-1 text-bold text-italic">{{$article->price}} €</p> 
                             <p class="text-italic">{{ $article->body }}</p> 
                         </div> 
-                        {{-- <button class="btn btn-outline-dark ms-4 mb-5" type="submit">Read More...</button> --}}
+                        <a class="btn btn-outline-dark ms-4 mb-5" href="{{route('article.show', ['article'=>$article])}}">vedi di più..</a>
                     </div>
                 </a> 
             </div>

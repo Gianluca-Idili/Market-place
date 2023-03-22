@@ -36,7 +36,7 @@ class ArticleController extends Controller
      */
     // public function store(Request $request)
     // {
-    //     //
+    //     
     // }
 
     /**
@@ -44,7 +44,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('article.show', compact('article'));
     }
 
     /**

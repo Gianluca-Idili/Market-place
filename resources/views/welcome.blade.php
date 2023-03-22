@@ -17,7 +17,7 @@
                             <h3 class="mt-4 text-bold">{{$article->name}}</h3>
                             <p class="mb-1 text-bold text-italic">{{$article->price}} €</p> 
                             <p class="text-italic">{{ $article->body }}</p> 
-                            <a href="">Categorie:{{$article->category->name}}</a>
+                            <p>Categorie: <a class="text-decoration-none text-bold" href="{{route('category.show', ['category'=>$article->category])}}">{{$article->category->name}}</a></p>
                             <p>Pubblicato il {{$article->created_at->format('d/m/Y')}}</p>
                         </div> 
                         
