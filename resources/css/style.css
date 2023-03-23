@@ -158,7 +158,7 @@ body{
       }
      .customCard{
       box-sizing: border-box;
-      width: 400px;
+      width: 350px;
       height: 470px;
       background: rgba(217, 217, 217, 0.58);
       border: 1px solid white;
@@ -167,21 +167,23 @@ body{
       border-radius: 17px;
       text-align: center;
       cursor: pointer;
-      transition: all 0.5s;
-      display: flex;
+      transition: 0.7s;
+      /* display: flex; */
       align-items: center;
       justify-content: center;
       user-select: none;
       font-weight: bolder;
       }
       .customCard:hover {
-        border: 1px solid black;
-        transform: scale(1.05);
+        border: 0.5px solid #26324c;
+        transform: scale(1.01);
       }
       
-      .customCard:active {
+      /* .customCard:active {
         transform: scale(0.95) rotateZ(1.7deg);
-      }
+      } */
       
-
-
+.textCard{
+  margin-left: 12px;
+  
+}
