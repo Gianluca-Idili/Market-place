@@ -11,7 +11,7 @@ class ArticleList extends Component
 
     public function render()
     {
-        $articles= Article::all();
+        $articles= Article::where('is_accepted',true)->get();
         return view('livewire.article-list', compact('articles'));
     }
 }

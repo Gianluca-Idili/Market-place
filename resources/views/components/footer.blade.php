@@ -69,7 +69,7 @@
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-dark">Link 1</a>
+              <a href="{{route('become.revisor')}}" class="text-dark">Lavora con noi</a>
             </li>
           </ul>
         </div>
