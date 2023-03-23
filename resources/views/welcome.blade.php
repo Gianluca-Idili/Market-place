@@ -1,6 +1,12 @@
 <x-layout>
     {{-- <x-menuCategory/> --}}
   <x-header>
+    @if(session('messageRevisor'))
+    <div class="alert alert-success">
+        {{session('messageRevisor')}}
+    </div>
+    @endif
+
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-8 bigTitle text-center">
