@@ -15,9 +15,9 @@
 
                   
             </ul>
-            <div class="nav-item mx-4 fs-5">
+            {{-- <div class="nav-item mx-4 fs-5">
                 <a class="nav-link  btn-addArt" aria-current="page" href="{{ route('article.create') }}">Inserisci articolo</a>
-            </div>
+            </div> --}}
             @guest
                 <div class="nav-item dropdown me-3 fs-5">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -30,6 +30,9 @@
                     </ul>
                 </div>
                 @else
+                <div class="nav-item mx-4 fs-5">
+                    <a class="nav-link  btn-addArt" aria-current="page" href="{{ route('article.create') }}">Inserisci articolo</a>
+                </div>
                 <div class="nav-item dropdown me-3 fs-5">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
