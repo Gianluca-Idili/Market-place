@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-        <h1>crea il tuo articolo brutto!!</h1>
+        <h1 class="mt-5 txtMain ms-5" >Esplora la nostra vasta selezione di articoli</h1>
     </x-header>
 
 

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-white mx-5 mt-5  mb-2 shadow">
     <div class="container-fluid">
-        <a class="navbar-brand " href="{{ route('homepage') }}"><img class="logoHover" width="180"
+        <a class="navbar-brand mb-2 " href="{{ route('homepage') }}"><img class="logoHover" width="180"
                 src="\media\logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,9 +15,9 @@
 
                   
             </ul>
-            {{-- <div class="nav-item mx-4 fs-5">
+            <div class="nav-item mx-4 fs-5">
                 <a class="nav-link  btn-addArt" aria-current="page" href="{{ route('article.create') }}">Inserisci articolo</a>
-            </div> --}}
+            </div>
             @guest
                 <div class="nav-item dropdown me-3 fs-5">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

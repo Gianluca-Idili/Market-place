@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="row justify-content-center">
+<div class="container-fluid">
+    <div class="row ">
         <div class="col-12">
             {{$slot}}
         </div>

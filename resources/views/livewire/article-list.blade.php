@@ -2,10 +2,10 @@
     <div class="row py-5">
         @if(count($articles))
             @foreach($articles as $article)
-            <div class="col-12 col-md-6 col-lg-4 mb-5">
+            <div class="col-12 col-md-6 col-lg-4 m-5 customCard">
                 {{-- <a class="text-decoration-none" href="{{route('article.show', ['article'=>$article])}}"> --}}
-                    <div class="main-pro bg-white shadow-card">
-                        <div class="ms-4 p-3 bg-white text-black body-card"> 
+                    <div class="main-pro bg-white shadow-card h-100">
+                        {{-- <div class="bg-white text-black body-card">  --}}
                             <div id="item-{{$article->id}}" class="carousel slide" data-bs-ride="true">
                                 <div class="carousel-indicators">
                                   <button type="button" data-bs-target="#item-{{$article->id}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -36,8 +36,8 @@
                             <h3 class="mt-4 text-bold">{{$article->name}}</h3>
                             <p class="mb-1 text-bold text-italic">{{$article->price}} €</p> 
                             <p class="text-italic">{{ $article->body }}</p> 
-                        </div> 
-                        <a class="btn btn-outline-dark ms-4 mb-5" href="{{route('article.show', ['article'=>$article])}}">vedi di più..</a>
+                        {{-- </div>  --}}
+                        {{-- <a class="btn btn-outline-dark ms-4 mb-5" href="{{route('article.show', ['article'=>$article])}}">vedi di più..</a> --}}
                     </div>
                 {{-- </a>  --}}
             </div>
