@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,7 @@ Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name(
 Route::get('/user/profile', [UserController::class, 'profile'])->name('user.profile');
 Route::delete('/user/destroy', [UserController::class, 'destroy'])->name('user.destroy');
 Route::put('/user/avatar/{user}', [UserController::class, 'avatar'])->name('avatar');
+
+
+//RevisorController
+Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');

@@ -11,33 +11,38 @@
                 <li class="nav-item">
                     <a class="nav-link txtMain fs-5  " href="{{ route('article.index') }}">Tutti gli articoli</a>
                 </li>
-                
-
-                  
+                @if (Auth::user()->is_revisor)
+                    <li class="nav-item">
+                        <a class="nav-link txtMain fs-5  "href="{{ route('revisor.index') }}">Area Revisore
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                {{ App\Models\Article::toBeRevisionedCount() }}
+                                <span class="visually-hidden">Messaggi non visualizzati</span>
+                            </span></a>
+                    </li>
+                @endif
             </ul>
-            <div class="nav-item mx-4 fs-5">
-                <a class="nav-link  btn-addArt" aria-current="page" href="{{ route('article.create') }}">Inserisci articolo</a>
-            </div>
             @guest
                 <div class="nav-item dropdown me-3 fs-5">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                     Guest
+                        Guest
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
                         <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
                     </ul>
                 </div>
-                @else
+            @else
                 <div class="nav-item mx-4 fs-5">
-                    <a class="nav-link  btn-addArt" aria-current="page" href="{{ route('article.create') }}">Inserisci articolo</a>
+                    <a class="nav-link  btn-addArt" aria-current="page" href="{{ route('article.create') }}">Inserisci
+                        articolo</a>
                 </div>
                 <div class="nav-item dropdown me-3 fs-5">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                         {{ Auth::user()->name }} 
-                         <img style="width:50px; border-radius:50%" class="mx-3" src="{{Storage::url(Auth::user()->avatar)}}" alt="">
+                        {{ Auth::user()->name }}
+                        <img style="width:50px; border-radius:50%" class="mx-3"
+                            src="{{ Storage::url(Auth::user()->avatar) }}" alt="">
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('user.profile') }}">Profilo</a></li>
