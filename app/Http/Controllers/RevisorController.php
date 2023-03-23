@@ -6,6 +6,8 @@ use App\Models\User;
 use App\Models\Article;
 use App\Mail\BecomeRevisor;
 use Illuminate\Http\Request;
+use Ramsey\Uuid\Type\Integer;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Artisan;
@@ -38,5 +40,13 @@ class RevisorController extends Controller
     public function makeRevisor( User $user){
         Artisan::call('presto:makeUserRevisor',["email"=>$user->email]);
         return redirect('/')->with('messageRevisor','Benvenuto! Sei stato nominato revisore');
+    }
+    public function update(){
+        $last_article = DB::table('articles')->whereNotNull('is_accepted')->orderBy('id','desc')->first();
+        if($last_article){
+            DB::table('articles')->where('id', $last_article->id)->update(['is_accepted'=>NULL]);
+        }
+       return redirect()->back();
+    
     }
 }

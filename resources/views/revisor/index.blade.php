@@ -11,8 +11,8 @@
 </div>
 @if($article_to_check)
 <div class="container-fluid py-5">
-    <div class="row py-5">
-            <div class="col-12 col-md-6 col-lg-4 m-5 customCard">
+    <div class="row justify-content-center py-5">
+            <div class="col-6 col-md-6 text-center col-lg-4 m-5 customCard">
                     <div class="main-pro bg-white shadow-card h-100">
                             <div id="item-{{$article_to_check->id}}" class="carousel slide" data-bs-ride="true">
                                 <div class="carousel-indicators">
@@ -42,22 +42,37 @@
                             </div>
                             <h3 class="mt-4 text-bold">{{$article_to_check->name}}</h3>
                             <p class="mb-1 text-bold text-italic">{{$article_to_check->price}} €</p> 
-                            <p class="text-italic">{{ $article_to_check->body }}</p> 
-                            <form action="{{route('revisor.accept_article', ['article'=>$article_to_check])}}" method="POST">
+                            <p class="text-italic">{{ $article_to_check->body }}</p>
+                            <div class="d-flex justify-content-center">
+                               <form class="mx-5 my-5" action="{{route('revisor.accept_article', ['article'=>$article_to_check])}}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-success">Accetta</button>
+                                <button type="submit" class="btn fs-5 btn-success">Accetta</button>
                             </form>
-                            <form action="{{route('revisor.reject_article', ['article'=>$article_to_check])}}" method="POST">
+                            <form class="mx-5 my-5" action="{{route('revisor.reject_article', ['article'=>$article_to_check])}}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-danger">Rifiuta</button>
+                                <button type="submit" class="btn fs-5 btn-danger">Rifiuta</button>
                             </form>
+                            </div> 
+                           
                     </div>
             </div>
     </div>
 </div>
 @endif
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="text-center col-6">
+      <form method="POST" action="{{route('revisor.update')}}">
+        @csrf
+        <button class="btn btn-warning" type="submit">ANNULLA</button>
+      </form>
+    </div>
+</div>
+
+</div>
+
 
 
 </x-layout>
