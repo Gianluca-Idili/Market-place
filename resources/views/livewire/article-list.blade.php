@@ -1,3 +1,13 @@
+<div class="container-fluid my-5">
+  <div class="row picShow">
+    <div class="col-12">
+
+    </div>
+  </div>
+</div>
+
+
+
 <div class="container-fluid py-5">
     <div class="row py-5">
         @if(count($articles))
@@ -57,4 +67,5 @@
             </div>
         @endif
     </div>
+  
 </div>

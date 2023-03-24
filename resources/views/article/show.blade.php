@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-        <h1>dettaglio di {{$article->name}}</h1>
+        <h1>Dettaglio di {{$article->name}}</h1>
     </x-header>
 
 
