@@ -3,12 +3,22 @@
 namespace App\Models;
 
 use App\Models\User;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+
+
+
+
+
+
+
+
+
 class Article extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
     protected $fillable = [
         'name',
         'price',
@@ -16,7 +26,19 @@ class Article extends Model
         'category_id',
         'user_id',
         'cover',
-    ];
+    ]; 
+
+    // public function toSearchableArray()
+    // {
+    //   $category= $this->category;
+    //   $array= [
+    //     'id' => $this->id,
+    //     'name' => $this->name,
+    //     'body' => $this->body,
+    //     'category' => $category        
+    //   ];
+    //   return $array;
+    // }
 
     public function category(){
        return $this->belongsTo(Category::class);
