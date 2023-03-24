@@ -12,59 +12,21 @@
     <div class="row py-5">
         @if(count($articles))
             @forelse($articles as $article)
-            <div class="col-12 col-md-6 col-lg-4 m-5 customCard">
-                {{-- <a class="text-decoration-none" href="{{route('article.show', ['article'=>$article])}}"> --}}
-                    <div class="main-pro bg-white shadow-card h-100">
-                        {{-- <div class="bg-white text-black body-card">  --}}
-                            <div id="item-{{$article->id}}" class="carousel slide" data-bs-ride="true">
-                                <div class="carousel-indicators">
-                                  <button type="button" data-bs-target="#item-{{$article->id}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                  <button type="button" data-bs-target="#item-{{$article->id}}" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                  <button type="button" data-bs-target="#item-{{$article->id}}" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <img src="http://picsum.photos//300" class="d-block w-100" alt="...">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img src="http://picsum.photos//301" class="d-block w-100" alt="...">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img src="http://picsum.photos//302" class="d-block w-100" alt="...">
-                                  </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#item-{{$article->id}}" data-bs-slide="prev">
-                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#item-{{$article->id}}" data-bs-slide="next">
-                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            {{-- <img src="http://picsum.photos//300" alt="immagine articolo"> --}}
-                            <h3 class="mt-4 text-bold">{{$article->name}}</h3>
-                            <p class="mb-1 text-bold text-italic">{{$article->price}} €</p> 
-                            <p class="text-italic">{{ $article->body }}</p> 
-                        {{-- </div>  --}}
-                        {{-- <a class="btn btn-outline-dark ms-4 mb-5" href="{{route('article.show', ['article'=>$article])}}">vedi di più..</a> --}}
-                    </div>
-                {{-- </a>  --}}
-            </div>
-            @empty
-                <div class="col-12">
-                  <div class="alert-warning alert py-3 shadow">
-                    <p class="lead">
-                      Non ci sono annunci per questa rirca.
-                    </p>
-                  </div>
-                </div>
-            @endforelse
-            {{-- {{$article->link()}} --}}
-        @else
+            <a class="col-12 col-md-6 col-lg-3 text-center text-decoration-none txtMain my-5" href="{{route('article.show',compact('article'))}}" >                          
+              <img class="img-fluid shadow-card customCard" src="http://picsum.photos//300" alt="immagine articolo">         
+                <p class="text-start my-2 text-bold text-italic textCard fs-2 fw-bold">{{$article->price}} €</p>
+                <h3 class="text-start  text-bold textCard">{{$article->name}}</h3>             
+                {{-- <p class="text-start text-italic textCard">{{ $article->body }}</p>  --}}
+            </a>
+              @empty
             <div class="col-12 ms-5 ps-5">
             Sorry to inform you that there are no houses available for sale at the moment.
             </div>
+
+
+
+            @endforelse
+            {{-- {{$articles->links()}} --}}
         @endif
     </div>
   
