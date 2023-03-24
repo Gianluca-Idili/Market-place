@@ -1,7 +1,7 @@
 <div class="container-fluid py-5">
     <div class="row py-5">
         @if(count($articles))
-            @foreach($articles as $article)
+            @forelse($articles as $article)
             <div class="col-12 col-md-6 col-lg-4 m-5 customCard">
                 {{-- <a class="text-decoration-none" href="{{route('article.show', ['article'=>$article])}}"> --}}
                     <div class="main-pro bg-white shadow-card h-100">
@@ -41,7 +41,16 @@
                     </div>
                 {{-- </a>  --}}
             </div>
-            @endforeach
+            @empty
+                <div class="col-12">
+                  <div class="alert-warning alert py-3 shadow">
+                    <p class="lead">
+                      Non ci sono annunci per questa rirca.
+                    </p>
+                  </div>
+                </div>
+            @endforelse
+            {{-- {{$article->link()}} --}}
         @else
             <div class="col-12 ms-5 ps-5">
             Sorry to inform you that there are no houses available for sale at the moment.

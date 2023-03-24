@@ -20,6 +20,9 @@ use App\Http\Controllers\RevisorController;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/categories/{category}', [PublicController::class, 'categoryShow'])->name('category.show');
 
+// Rotte ricerca
+Route::get('/ricerca/article', [PublicController::class, 'searchArticle'])->name('articles.search');
+
 //ArticleController
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');

@@ -20,7 +20,14 @@
   <div class="container mt-5">
     <div class="row justify-content-center mt-5">
       <div class="col-8">
-        <form  class="w-100 d-flex button_Button"><div class="w-100 d-flex  "><input placeholder="Cerca in Tutte le categorie" class="w-100 button_Button_One" ></div><i class="searchImg bi bi-search my-auto mx-2 p-2"></i></form>
+        <form action="{{route('articles.search')}}" method="get" class="w-100 d-flex button_Button">
+          @csrf
+          <div class="w-100 d-flex  ">
+            <input placeholder="Cerca nel nostro sito" class="w-100 button_Button_One" >
+          </div>
+          <button type="submit" class="btn "><i class="searchImg bi bi-search my-auto mx-2 p-2">
+          </i></button>
+        </form>
       </div>
     </div>
   </div>
