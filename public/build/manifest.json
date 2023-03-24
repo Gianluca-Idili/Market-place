@@ -1,0 +1,24 @@
+{
+  "public/fonts/Lora-Regular.ttf": {
+    "file": "assets/Lora-Regular-da0ddfdf.ttf",
+    "src": "public/fonts/Lora-Regular.ttf"
+  },
+  "public/fonts/NunitoSans-Bold.ttf": {
+    "file": "assets/NunitoSans-Bold-260bcd4e.ttf",
+    "src": "public/fonts/NunitoSans-Bold.ttf"
+  },
+  "public/media/1.jpg": {
+    "file": "assets/1-6cfc7ca1.jpg",
+    "src": "public/media/1.jpg"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-cbb2d39a.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-69b92dd5.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
