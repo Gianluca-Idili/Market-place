@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-        <h1>crea il tuo articolo brutto!!</h1>
+        <h1>Inserisci qui il tuo articolo</h1>
     </x-header>
 
 
