@@ -26,19 +26,7 @@ class Article extends Model
         'category_id',
         'user_id',
         'cover',
-    ]; 
-
-    // public function toSearchableArray()
-    // {
-    //   $category= $this->category;
-    //   $array= [
-    //     'id' => $this->id,
-    //     'name' => $this->name,
-    //     'body' => $this->body,
-    //     'category' => $category        
-    //   ];
-    //   return $array;
-    // }
+    ];
 
     public function category(){
        return $this->belongsTo(Category::class);

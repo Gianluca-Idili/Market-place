@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
     public function __construct(){
+        
         $this->middleware('auth')->except('index');
     }
     
@@ -18,7 +20,8 @@ class ArticleController extends Controller
     * Display a listing of the resource.
     */
     public function index(){
-        return view('article.index');
+    $articles = DB::table('articles')->paginate(10);
+        return view('article.index', compact('articles'));
     }
     
     /**
