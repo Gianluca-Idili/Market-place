@@ -156,7 +156,7 @@ body{
       .searchImg:hover{
         color: var(--c-second);
       }
-     .customCard{
+    .customCard{
       box-sizing: border-box;
       width: 350px;
       height: 470px;
