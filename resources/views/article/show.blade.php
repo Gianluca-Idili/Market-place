@@ -1,4 +1,5 @@
 <x-layout>
+    <x-menuCategory />
     <x-header>
         {{-- <h1 class="text-end me-5">Dettaglio di {{ $article->name }}</h1> --}}
     </x-header>

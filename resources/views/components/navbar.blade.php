@@ -14,11 +14,14 @@
                 {{-- se l'utente è revisore ed è loggato --}}
                 @if (Auth::user() && Auth::user()->is_revisor)
                     <li class="nav-item">
-                        <a class="nav-link txtMain fs-5  "href="{{ route('revisor.index') }}">Area Revisore
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                        <a class="nav-link txtMain fs-5 position-relative" href="{{ route('revisor.index') }}">Area Revisore
+                            <span class=" spanRevisor translate-middle badge rounded-pill">
                                 {{ App\Models\Article::toBeRevisionedCount() }}
-                                <span class="visually-hidden">Messaggi non visualizzati</span>
-                            </span></a>
+                                <span class="visually-hidden">
+                                    Messaggi non visualizzati
+                                </span>
+                            </span>
+                        </a>
                     </li>
                 @endif
             </ul>
@@ -58,4 +61,4 @@
         </div>
     </div>
 </nav>
-<x-menuCategory />
+

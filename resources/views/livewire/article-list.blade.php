@@ -1,5 +1,6 @@
 <div class="container-fluid my-5">
-    <div class="row picShow">
+    <div class="row picShow position-relative">
+        <h2 class="sloganIndex display-4 "> Shopping facile, <br> vita facile.</h2>
         <div class="col-12">
 
         </div>

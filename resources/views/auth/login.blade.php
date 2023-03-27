@@ -15,7 +15,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
-                <form class="" action="{{ route('login') }}" method="POST">
+                <form class=" shadow p-5" action="{{ route('login') }}" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label for="email" class="form-label">Indirizzo e-mail</label>
@@ -31,8 +31,12 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Ricordami</label>
                     </div> --}}
-                    <button type="submit" class="btn btn-primary">Accedi</button>
-                    <a class="btn btn-warning" href="{{ route('register') }}">Registrati</a>
+                    <button type="submit" class="btn btn-warning shadow">Accedi</button>
+                    <div class="d-flex my-5 justify-content-evenly ">
+                        <p class="mx-3 fs-4">Se non sei registrato:</p>
+                        <a class="btn btn-secondary mb-5 shadow" href="{{ route('register') }}">Registrati</a>
+                    </div>
+                    
                 </form>
                 
             </div>

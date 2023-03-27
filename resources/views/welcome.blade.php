@@ -1,4 +1,5 @@
 <x-layout>
+    <x-menuCategory />
     <x-search></x-search>
     {{-- <x-menuCategory/> --}}
     <x-header>
@@ -11,8 +12,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 bigTitle text-center">
-                    <h1 class="txtMain display-5 fontTwo">La tua esperienza di shopping online inizia qui, con una
-                        selezione senza pari di prodotti!
+                    <h1 class="txtMain display-5 fontTwo">La tua esperienza di shopping online inizia qui, con una selezione senza pari di prodotti.
                     </h1>
                 </div>
             </div>
@@ -24,6 +24,7 @@
             <div class="col-12">
                 {{-- <p>Ecco  tutti gli annunci</p> --}}
                 <div class="row justify-content-center">
+                    <h1 class=" text-center mt-5 txtMain fw-bold">Ultime sei inserzioni: <hr></h1>
                     @foreach ($articles as $article)
                         <div class="col-12 col-md-4">
                             <div class="main-pro bg-white shadow-card">
@@ -67,7 +68,7 @@
                                     {{-- <img src="{{Storage::url($article->cover)}}" alt="immagine articolo"> --}}
                                     <h3 class="mt-4 text-bold">{{ $article->name }}</h3>
                                     <p class="mb-1 text-bold text-italic">{{ $article->price }} €</p>
-                                    <p class="text-italic">{{ $article->body }}</p>
+                                    <p class="text-italic">{{ Str::limit($article->body, 60) }}</p>
                                     <p>Categorie: <a class="text-decoration-none text-bold"
                                             href="{{ route('category.show', ['category' => $article->category]) }}">{{ $article->category->name }}</a>
                                     </p>

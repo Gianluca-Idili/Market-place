@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1281px){
+@media only screen and (min-width: 768px){
 
 .textCard{
     margin-left: 85px;
@@ -30,7 +30,19 @@
   .categoryForMobile{
     display: none;
   }
-
+  .spanRevisor{
+    position: absolute;
+    top: 0;
+    background: red;
+    right: 100;
+  }
+.sloganIndex{
+  color: white;
+  position: absolute;
+  top: 270px;
+  left: 970px;
+  
+}
 
 
 
