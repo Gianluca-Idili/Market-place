@@ -4,7 +4,7 @@
     </x-header>
 
 
-@livewire('article-create-form')
+    @livewire('article-create-form')
 
 
 </x-layout>

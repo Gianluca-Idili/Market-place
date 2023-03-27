@@ -4,7 +4,7 @@
     </x-header> --}}
 
 
-@livewire('article-list')
+    @livewire('article-list')
 
 
 </x-layout>

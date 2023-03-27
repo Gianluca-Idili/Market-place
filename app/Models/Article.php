@@ -24,6 +24,7 @@ class Article extends Model
         'price',
         'body',
         'category_id',
+        'category',
         'user_id',
         'cover',
     ];
