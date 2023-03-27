@@ -27,7 +27,7 @@
     </div>
 
     <x-footer />
-
+    <x-footerMobile />
     @livewireScripts
 </body>
 

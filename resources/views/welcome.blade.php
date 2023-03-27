@@ -9,7 +9,7 @@
       
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-8 bigTitle text-center">
+                <div class="col-12 col-md-8 bigTitle text-center">
                     <h1 class="txtMain display-5 fontTwo">La tua esperienza di shopping online inizia qui, con una
                         selezione senza pari di prodotti!
                     </h1>

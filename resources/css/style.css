@@ -193,7 +193,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.794) 0%, rgba(252, 181
   background-position: top;
   background-repeat: no-repeat;
   background-size:cover ;
-  height: 320px;
+  height: 170px;
 }
 
 .size_show{
@@ -203,4 +203,8 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.794) 0%, rgba(252, 181
 .categoryPc{
   display: none;
 
+}
+.footerMobile{
+  display: block;
+  
 }

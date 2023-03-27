@@ -13,8 +13,9 @@
     background-repeat: no-repeat;
     background-size:cover ;
     height: 620px;
-    
-  
+  }
+  .footerMobile{
+    display: none;
   }
 
 

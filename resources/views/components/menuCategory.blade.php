@@ -23,7 +23,4 @@
         </div>
     </div>
     {{-- FinishSearch --}}
-    <div class="nav-item mx-4 fs-5 text-center mt-4">
-        <a class="nav-link  btn-addArt" aria-current="page" href="{{ route('article.create') }}">Inserisci
-            articolo</a>
-    </div>
+    

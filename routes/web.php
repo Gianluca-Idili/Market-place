@@ -30,7 +30,7 @@ Route::get('/article/create', [ArticleController::class, 'create'])->name('artic
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 
 //UserController
-Route::get('/user/profile', [UserController::class, 'profile'])->name('user.profile');
+Route::get('/user/profile', [UserController::class, 'profile'])->middleware('auth')->name('user.profile');
 Route::delete('/user/destroy', [UserController::class, 'destroy'])->name('user.destroy');
 Route::put('/user/avatar/{user}', [UserController::class, 'avatar'])->name('avatar');
 
