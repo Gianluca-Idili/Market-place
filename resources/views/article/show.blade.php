@@ -42,7 +42,7 @@
                     <p class="mt-4 text-bold"><strong>{{ $article->name }}</strong></p>
                 </div>
                 <div class="fs-3 txtMain">
-                    <p class="text-italic  justified">{{ $article->body }}</p>
+                    <p class="text-italic  min-wh-100 justified">{{ $article->body }}</p>
                 </div>
                 <hr>
                 <div class="fs-3 txtMain">
