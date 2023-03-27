@@ -5,6 +5,12 @@
     }
 .categoryPc{
     display: contents;
+    
+}
+
+.addArtPc{
+  margin-right: 25px;
+  display: grid;
 }
 .picShow{
     background: rgb(255,255,255);
@@ -17,7 +23,10 @@
   .footerMobile{
     display: none;
   }
-
+  .size_show{
+    margin-top: 200px;
+    
+  }
 
 
 

@@ -3,8 +3,8 @@
         {{-- <h1 class="text-end me-5">Dettaglio di {{ $article->name }}</h1> --}}
     </x-header>
     <div class="container size_show">
-        <div class="row justify-content-center">
-            <div class="col-6">
+        <div class="row justify-content-between  ">
+            <div class="col-12 col-md-6">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -37,17 +37,23 @@
                     </button>
                 </div>
             </div>
-            <div class="col-6 bg-white text-black text-end">
+            <div class="col-12 col-md-6 bg-white text-black text-center">
                 <div class="display-3 txtMain">
                     <p class="mt-4 text-bold"><strong>{{ $article->name }}</strong></p>
                 </div>
                 <div class="fs-3 txtMain">
-                    <p class="text-italic">{{ $article->body }}</p>
+                    <p class="text-italic  justified">{{ $article->body }}</p>
                 </div>
-                <div class="fs-4 txtAccent">
+                <hr>
+                <div class="fs-3 txtMain">
+                    <p class="text-italic"><small> Caricato il :</small>  {{$article->created_at->format('d/m/Y')}} </p>
+                <div class="fs-3 txtMain">
+                <p class="text-italic"> <small>  Inserito da : </small> {{$article->user->name}}</p>
+                </div>  
+                <div class="fs-1 txtAccent">
                     <p class="mb-1 text-bold text-italic">{{ $article->price }} €</p>
                 </div>
-
+                </div>
             </div>
         </div>
     </div>

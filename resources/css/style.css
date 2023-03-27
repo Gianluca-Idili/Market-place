@@ -7,6 +7,13 @@ body{
   src: url(/public/fonts/NunitoSans-Bold.ttf);
   
 }
+hr{
+  border-color: 1px solid var(--c-main);
+
+}
+.justified{
+  text-align: justify;
+}
 :root{
     --c-main:#14213e;
     --c-second:#E5E5E5;
@@ -197,14 +204,47 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.794) 0%, rgba(252, 181
 }
 
 .size_show{
-  margin-top: 200px;
+  margin-top: 50px;
   
 }
 .categoryPc{
   display: none;
 
+
 }
 .footerMobile{
   display: block;
   
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(0);
+  transition: all 1.5s;
+}
+
+.hidden-left {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.hidden-right {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.addArtPc{
+  margin-right: 25px;
+   display: none;
 }

@@ -1,10 +1,16 @@
 <x-layout>
     <x-header>
-        <h1>Inserisci qui il tuo articolo</h1>
+        <hr>
+        <h1 class="text-center mt-5 txtMain ">Inserisci qui il tuo articolo</h1>
     </x-header>
 
-
-    @livewire('article-create-form')
-
+    <div class="container">
+        <div class="row justify-content-center my-5">
+            <div class="col-12 col-md-8">
+                @livewire('article-create-form')
+            </div>
+        </div>
+    </div>
+    
 
 </x-layout>
