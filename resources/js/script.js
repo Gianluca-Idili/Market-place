@@ -17,4 +17,11 @@ hiddenLeftElements.forEach((el) => observer.observe(el));
 
 const hiddenRightElements = document.querySelectorAll('.hidden-right');
 hiddenRightElements.forEach((el) => observer.observe(el));
+
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
  

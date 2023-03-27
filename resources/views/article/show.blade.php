@@ -38,22 +38,35 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 bg-white text-black text-center">
-                <div class="display-3 txtMain">
-                    <p class="mt-4 text-bold"><strong>{{ $article->name }}</strong></p>
-                </div>
-                <div class="fs-3 txtMain">
-                    <p class="text-italic  min-wh-100 justified">{{ $article->body }}</p>
+                <div class="bg-white text-black text-end">
+                    <div class="display-3 txtMain">
+                        <p class="mb-5 text-bold"><strong>{{ $article->name }}</strong></p>
+                    </div>
+                    <div class="fs-3 txtMain">
+                        <p class="text-italic  min-wh-100 justified">{{ $article->body }}</p>
+                    </div>
                 </div>
                 <hr>
-                <div class="fs-3 txtMain">
-                    <p class="text-italic"><small> Caricato il :</small>  {{$article->created_at->format('d/m/Y')}} </p>
-                <div class="fs-3 txtMain">
-                <p class="text-italic"> <small>  Inserito da : </small> {{$article->user->name}}</p>
-                </div>  
-                <div class="fs-1 txtAccent">
-                    <p class="mb-1 text-bold text-italic">{{ $article->price }} €</p>
+                <div class="bg-white text-black text-end">
+                    <div class="fs-3 txtMain">
+                        <p class="text-italic"><small> Caricato il :</small> {{ $article->created_at->format('d/m/Y') }}
+                        </p>
+                        <div class="fs-3 txtMain">
+                            <p class="text-italic"> <small> Inserito da : </small> {{ $article->user->name }}</p>
+                        </div>
+                        <div class="fs-1 txtAccent">
+                            <p class="mb-1 text-bold text-italic">{{ $article->price }} €</p>
+                        </div>
+                    </div>
                 </div>
-                </div>
+            </div>
+            
+
+            <div class="text-end mt-3">
+                {{-- <a class="btn btn-succes" href="">compra</a> --}}
+                <a class="btn btn-addArt" href="{{ route('article.index') }}">Torna indietro</a>
+
+
             </div>
         </div>
     </div>
