@@ -23,9 +23,8 @@
                 @endif
             </ul>
             @guest
-                <div class="nav-item dropdown me-3 fs-5">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                <div class="nav-item dropdown me-5 fs-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Guest
                     </a>
                     <ul class="dropdown-menu">
@@ -45,7 +44,7 @@
                         <img style="width:50px; border-radius:50%" class="mx-3"
                             src="{{ Storage::url(Auth::user()->avatar) }}" alt="">
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu ">
                         <li><a class="dropdown-item" href="{{ route('user.profile') }}">Profilo</a></li>
                         <li><a class="dropdown-item" href=""
                                 onclick="event.preventDefault();document.querySelector('#form-logout').submit()">Logout</a>

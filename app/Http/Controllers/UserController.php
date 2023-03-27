@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
-{
+{    
+   
    
     public function profile(User $user = NULL){
         //Primo metodo
@@ -25,11 +27,11 @@ class UserController extends Controller
         //TUTTI I RECORD->PRENDO SOLO QUELLI DELL'UTENTE LOGGATO-->ORDINO
     }
 
-    public function avatar(User $user, Request $request){
+    public function avatar(User $user, UserRequest $request){
         $user->update([
             'avatar' => $request->file('avatar')->store('public/avatars'),
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('avatarChange', 'Hai cambiato con successo la tua foto profilo!');
     }
     public function destroy(){
         $user_articles= Auth::user()->articles;
