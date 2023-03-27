@@ -1,3 +1,4 @@
+{{-- menù categorie per pc --}}
 <div class="container ">
     <div class="row justify-content-center">
         <div class="col-12 text-center mt-3 fs-5 categoryPc">
@@ -5,22 +6,31 @@
                 <a class="menuCategoriesHover text-decoration-none mx-3 fs-5 "
                     href=" {{ route('category.show', compact('category')) }}">{{ $category->name }}</a>
             @endforeach
-
         </div>
     </div>
 </div>
- {{-- StartSearch --}}
-    <div class="container mt-4">
-        <div class="row justify-content-center mt-3">
-            <div class="col-12 col-md-8">
-                <form action="{{ route('articles.search') }}" method="GET" class="w-100 d-flex button_Button">
-                    <div class="w-100 d-flex"><input name="searched" placeholder="Cerca"
-                            class="w-100 button_Button_One"></div>
-                    <button class="btn" type="submit"> <i
-                      class="searchImg bi bi-search my-auto mx-2 p-2 me-3"></i></button>
-                </form>
-            </div>
+
+{{-- menù categorie per mobile --}}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <li class="nav-item dropdown fs-5 categoryForMobile">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Categorie
+                </a>
+                <ul class="dropdown-menu">
+                @foreach ($categories as $category)
+                <li><a class="dropdown-item" href="{{ route('category.show', compact('category'))}}">{{$category->name }}</a></li>
+                @endforeach
+                <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
+                <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
+                </ul>
+            </li>
         </div>
     </div>
-    {{-- FinishSearch --}}
+</div>
+
+
+
     

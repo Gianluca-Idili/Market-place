@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center mt-5">
             <div class="col-12 col-md-6">
                 <h1>
                     {{ $article_to_check ? 'Ecco l\'annuncio sa revisionare' : 'Non ci sono annunci da revisionare' }}

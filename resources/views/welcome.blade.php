@@ -1,4 +1,5 @@
 <x-layout>
+    <x-search></x-search>
     {{-- <x-menuCategory/> --}}
     <x-header>
         @if (session('messageRevisor'))

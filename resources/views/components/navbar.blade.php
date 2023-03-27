@@ -21,19 +21,6 @@
                             </span></a>
                     </li>
                 @endif
-                <li class="nav-item dropdown fs-5 categoryForMobile">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Categorie
-                    </a>
-                    <ul class="dropdown-menu">
-                        @foreach ($categories as $category)
-                        <li><a class="dropdown-item" href="{{ route('category.show', compact('category'))}}">{{$category->name }}</a></li>
-                        @endforeach
-                        <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
-                        <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
-                    </ul>
-                </li>
             </ul>
             @guest
                 <div class="nav-item dropdown me-3 fs-5">
