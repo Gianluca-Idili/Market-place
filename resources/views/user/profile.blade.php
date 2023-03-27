@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container">
-        <div class="row">
+        <div class="row mt-5">
             
             <div class="col-12 col-md-6">
                 @if (session()->has('avatarChange'))
@@ -18,7 +18,6 @@
                     </ul>
                 </div>
                 @endif
-                <h2>Inserisci Avatar</h2>
                 <form class="my-5" action="{{ route('avatar', ['user' => Auth::user()]) }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
@@ -27,7 +26,7 @@
                     <button type="submit" class="btn btn-primary">Inserisci Immagine</button>
                 </form>
             </div>
-        <div class="col-12 col-md-6 d-flex justify-content-center align-item-center my-auto">
+        <div class="col-12 col-md-6 d-flex my-auto">
             <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
