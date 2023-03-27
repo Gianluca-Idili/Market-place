@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ use App\Http\Controllers\RevisorController;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/categories/{category}', [PublicController::class, 'categoryShow'])->name('category.show');
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchArticles'])->name('articles.search');
+
 
 // Rotte ricerca
 Route::get('/ricerca/article', [PublicController::class, 'searchArticle'])->name('articles.search');
@@ -41,6 +43,7 @@ Route::patch('/accetta/annuncio/{article}', [RevisorController::class, 'acceptAr
 Route::patch('/rifiuta/annuncio/{article}', [RevisorController::class, 'rejectArticle'])->middleware('isRevisor')->name('revisor.reject_article');
 Route::get('/richiesta/revisore',[RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/rendi/revisore/{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
+Route::get('/form/revisore',[RevisorController::class, 'formRevisor'])->middleware('auth')->name('revisor.form');
 
 
 // TEST

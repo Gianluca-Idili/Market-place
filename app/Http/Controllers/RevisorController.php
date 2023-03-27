@@ -46,7 +46,12 @@ class RevisorController extends Controller
         if($last_article){
             DB::table('articles')->where('id', $last_article->id)->update(['is_accepted'=>NULL]);
         }
-       return redirect()->back();
+        return redirect()->back();
     
     }
+    public function formRevisor(){
+        return view('revisor.form');
+    }
+
+    
 }
