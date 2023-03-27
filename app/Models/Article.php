@@ -8,14 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 
-
-
-
-
-
-
-
-
 class Article extends Model
 {
     use HasFactory, Searchable;
@@ -24,10 +16,21 @@ class Article extends Model
         'price',
         'body',
         'category_id',
-        'category',
         'user_id',
         'cover',
     ];
+
+    public function toSearchableArray()
+    {
+      $category = $this->category->name;
+      $array= [
+        'id' => $this->id,
+        'name' => $this->name,
+        'body' => $this->body,
+        'category' => $category,
+      ];
+      return $array;
+    }
 
     public function category(){
        return $this->belongsTo(Category::class);

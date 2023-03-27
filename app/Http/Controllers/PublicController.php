@@ -19,10 +19,10 @@ class PublicController extends Controller
 
     }
     public function searchArticle(Request $request){
+        // $category= Category::search($request->searched)->where('is_accepted', true)->paginate(10);
         $articles = Article::search($request->searched)->where('is_accepted', true)->paginate(10);
         return view('welcome', compact('articles'));
     }
-
 
     
 }
