@@ -27,6 +27,9 @@
     margin-top: 200px;
     
   }
+  .categoryForMobile{
+    display: none;
+  }
 
 
 
