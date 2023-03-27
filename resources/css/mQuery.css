@@ -3,6 +3,19 @@
 .textCard{
     margin-left: 85px;
     }
+.categoryPc{
+    display: contents;
+}
+.picShow{
+    background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.794) 0%, rgba(252, 181, 67, 0.694) 0%), url(/public/media/1.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    height: 620px;
+    
+  
+  }
 
 
 

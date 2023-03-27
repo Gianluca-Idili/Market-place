@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-white mx-5 mt-5  mb-2 shadow">
+<nav class="navbar navbar-expand-lg bg-white mx-1 mx-md-5 mt-1 mt-md-5  mb-2 shadow">
     <div class="container-fluid">
         <a class="navbar-brand mb-2 " href="{{ route('homepage') }}"><img class="logoHover" width="180"
                 src="\media\logo.png" alt=""></a>
@@ -34,7 +34,7 @@
                     </ul>
                 </div>
             @else
-                <div class="nav-item mx-4 fs-5">
+                <div class="nav-item mx-4 fs-5 categoryPc">
                     <a class="nav-link  btn-addArt" aria-current="page" href="{{ route('article.create') }}">Inserisci
                         articolo</a>
                 </div>

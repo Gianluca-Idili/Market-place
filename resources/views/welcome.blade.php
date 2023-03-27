@@ -6,7 +6,7 @@
                 {{ session('messageRevisor') }}
             </div>
         @endif
-
+      
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-8 bigTitle text-center">
@@ -17,20 +17,7 @@
             </div>
         </div>
     </x-header>
-    {{-- StartSearch --}}
-    <div class="container mt-5">
-        <div class="row justify-content-center mt-5">
-            <div class="col-8">
-                <form action="{{ route('articles.search') }}" method="GET" class="w-100 d-flex button_Button">
-                    <div class="w-100 d-flex"><input name="searched" placeholder="Cerca in Tutte le categorie"
-                            class="w-100 button_Button_One"></div>
-                    <button class="btn" type="submit"> <i
-                      class="searchImg bi bi-search my-auto mx-2 p-2 me-3"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-    {{-- FinishSearch --}}
+
     <div class="container allArticles">
         <div class="row">
             <div class="col-12">
