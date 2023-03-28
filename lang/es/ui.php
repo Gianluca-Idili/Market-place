@@ -1,7 +1,7 @@
 <?php
 
 return [
- 'titleWelcome'=>'Your online shopping experience starts here, with an unrivaled selection of products' , 
+ 'titleWelcome'=>'Su experiencia de compra en línea comienza aquí, con una selección de productos ' , 
 'allArticles'=>' All Articles',
 'lastListings'=>'Last six listings ',
 'wWu'=>' Work with us',
