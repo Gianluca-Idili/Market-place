@@ -54,11 +54,11 @@
         {{-- @foreach (Auth::user()->articles as $article) --}}
         @foreach ($articles as $article)
         <div class="col-12 col-lg-3 my-5">
-            <div class="card">
+            <div class="card h-100">
                 <img src="https://picsum.photos/300" class="card-img-top img-fluid" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{ $article->name }}</h5>
-                    <p class="card-text">{{ $article->body }}</p>
+                    <p class="card-text">{{ Str::limit($article->body, 50) }}</p>
                     <p>Pubblicato da:
                         <p class=" fw-bold fst-italic">{{ $article->user->name }}</p>
                     </p>
