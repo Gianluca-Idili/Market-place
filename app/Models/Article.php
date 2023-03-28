@@ -34,7 +34,7 @@ class Article extends Model
     }
 
     public function category(){
-       return $this->belongsTo(Category::class);
+      return $this->belongsTo(Category::class);
         
     }
 
@@ -52,7 +52,7 @@ class Article extends Model
         return true;
     }
 
-    public function images(){
+    public function image(){
       return $this->hasMany(Image::class);
     }
 }

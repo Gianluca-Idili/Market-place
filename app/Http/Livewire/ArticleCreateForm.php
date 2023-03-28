@@ -12,7 +12,8 @@ class ArticleCreateForm extends Component
 {
     use WithFileUploads;
 
-    
+    public $name, $price, $body, $article, $category_id, $categories, $image, $temporary_images;
+    public $images = []; 
 
     protected $rules = [
         'name' =>'required|min:4',
@@ -20,41 +21,42 @@ class ArticleCreateForm extends Component
         'price' =>'required|numeric',
         'category_id' => 'required',
         'temporary_images.*' => 'image|max:1024',
-        'images' => 'image|max:1024'
+        'images.*' => 'image|max:1024'
     ];
     protected $messages = [
         'temporary_images.*.image' => 'richiesta un immagine',
         'temporary_images.*.max' => 'la dimensione massima dell\'immagine è 1mb',
         'images.image' => 'richiesta un immagine',
-        'image.max' => 'la dimensione massima dell\'immagine è 1mb',
+        'images.max' => 'la dimensione massima dell\'immagine è 1mb',
     ];
 
-    public $name, $price, $body, $article, $category_id, $categories, $image, $temporary_images;
-    public $images = []; 
 
-    public function updateTemporaryImage(){
+
+    public function updateTemporaryImages(){
         if($this->validate([
-            'temporary_images.*' => 'image|max:1024',
+            'temporary_images.*' => 'image|max:1024'
         ])){
             foreach($this->temporary_images as $image){
                 $this->images[] = $image;
             }
         }
     }
+    // public function removeImage($key){
+    //     if(in_array($key,array_keys($this->images))){
+    //         unset($this->images[$key]);
+    //     }
+    // }
     public function store(){
-
+        // $this->article->user()->associate(Auth::user());
+        //         $this->article->save();
         $this->validate();
         $article = $this->article =Auth::user()->articles()->create([
             'name' => $this->name,
             'price' => $this->price,
             'body' => $this->body,
             'category_id'=> $this->category_id,
-            // 'cover'=>$this->cover->store('public/covers'),
         ]);
-        $this->clearForm();
-        
-        
-        
+        $this->clearForm();       
         session()->flash('articleCreated', 'hai creato corretamente l\'articolo');      
     }
 
@@ -63,7 +65,8 @@ class ArticleCreateForm extends Component
         $this->price = '';
         $this->body = '';
         $this->category_id = '';
-        // $this->cover= '';
+        $this->images= [];
+        $this->temporary_images = [];
     }
 
     public function mount()
