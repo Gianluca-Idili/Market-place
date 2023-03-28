@@ -11,14 +11,26 @@ use Livewire\WithFileUploads;
 class ArticleCreateForm extends Component
 {
     use WithFileUploads;
+
+    
+
     protected $rules = [
         'name' =>'required|min:4',
         'body' =>'required|min:10',
         'price' =>'required|numeric',
         'category_id' => 'required',
-        // 'cover' =>'required',
+        'temporary_images.*' => 'image|max:1024',
+        'images' => 'image|max:1024'
     ];
-    public $name, $price, $body, $article, $category_id, $categories,$cover;
+    protected $messages = [
+        'temporary_images.*.image' => 'richiesta un immagine',
+        'temporary_images.*.max' => 'la dimensione massima dell\'immagine è 1mb',
+        'images.image' => 'richiesta un immagine',
+        'image.max' => 'la dimensione massima dell\'immagine è 1mb',
+    ];
+
+    public $name, $price, $body, $article, $category_id, $categories, $cover, $image, $temporary_images;
+    public $images = []; 
 
     public function store(){
         $this->validate();

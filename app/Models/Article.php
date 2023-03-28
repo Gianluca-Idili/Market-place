@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\User;
+use App\Models\Image;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -49,5 +50,9 @@ class Article extends Model
         $this->is_accepted = $value;
         $this->save();
         return true;
+    }
+
+    public function images(){
+      return $this->hasMany(Image::class);
     }
 }
