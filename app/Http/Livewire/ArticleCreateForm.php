@@ -14,7 +14,7 @@ class ArticleCreateForm extends Component
     protected $rules = [
         'name' =>'required|min:4',
         'body' =>'required|min:10',
-        'price' =>'required|numbers|numeric',
+        'price' =>'required|numeric',
         'category_id' => 'required',
         // 'cover' =>'required',
     ];
