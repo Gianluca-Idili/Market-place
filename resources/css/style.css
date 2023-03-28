@@ -271,3 +271,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.794) 0%, rgba(252, 181
   left: 85px;
     
 }
+.img-preview{
+  height: 800px;
+  width: 800px;
+}

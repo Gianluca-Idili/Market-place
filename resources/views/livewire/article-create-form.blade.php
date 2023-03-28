@@ -8,28 +8,6 @@
     <form wire:submit.prevent="store" class="shadow p-5" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
-            <input type="file" wire:model.debounce.1200ms="temporary_image" name="images" multiple
-                class="form-control @error('temporary_images.*') is-invalid @enderror" placeholder="img">
-            @error('temporary_images.*')
-                <span class="fst-italic text-danger small txtMain">{{ $message }}</span>
-            @enderror
-        </div>
-        @if (!empty($images))
-        <div class="row">
-            <div class="col-12">
-                <p>Photo preview:</p>
-                <div class="row border border-4 border-info rounded shadow py-4">
-                    @foreach($images as $key => $image)
-                    <div class="col my-3">
-                        <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
-                        <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="remuveImage({{$key}})">Cancella</button>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-        @endif
-        <div class="mb-3">
             <label for="name" class="form-label fs-5  txtMain">Nome</label>
             <input type="string" wire:model.debounce.1200ms="name"
                 class="form-control @error('name') is-invalid @enderror" id="name">
@@ -66,7 +44,28 @@
                 <span class="fst-italic text-danger small txtMain">{{ $message }}</span>
             @enderror
         </div>
-
+        <div class="mb-3">
+            <input type="file" wire:model.debounce.1200ms="temporary_images" name="images" multiple
+              placeholder="img"  class="form-control @error('temporary_images.*') is-invalid @enderror" >
+            @error('temporary_images.*')
+                <span class="fst-italic text-danger small txtMain">{{ $message }}</span>
+            @enderror
+        </div>
+        @if (!empty($images))
+        <div class="row">
+            <div class="col-12">
+                <p>Photo preview:</p>
+                <div class="row border border-4 border-info rounded shadow py-4">
+                    @foreach($images as $key => $image)
+                    <div class="col my-3">
+                        <div class="img-preview mx-auto shadow rounded" style=" background-image: url({{$image->temporaryUrl()}});"></div>
+                        <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        @endif
         <button type="submit" class=" btn btn-addArt txtMain ">Inserisci</button>
     </form>
 </div>

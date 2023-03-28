@@ -29,12 +29,21 @@ class ArticleCreateForm extends Component
         'image.max' => 'la dimensione massima dell\'immagine è 1mb',
     ];
 
-    public $name, $price, $body, $article, $category_id, $categories, $cover, $image, $temporary_images;
+    public $name, $price, $body, $article, $category_id, $categories, $image, $temporary_images;
     public $images = []; 
 
+    public function updateTemporaryImage(){
+        if($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+        ])){
+            foreach($this->temporary_images as $image){
+                $this->images[] = $image;
+            }
+        }
+    }
     public function store(){
+
         $this->validate();
-        
         $article = $this->article =Auth::user()->articles()->create([
             'name' => $this->name,
             'price' => $this->price,
