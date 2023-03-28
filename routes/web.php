@@ -44,7 +44,9 @@ Route::patch('/rifiuta/annuncio/{article}', [RevisorController::class, 'rejectAr
 Route::get('/richiesta/revisore',[RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/rendi/revisore/{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
 Route::get('/form/revisore',[RevisorController::class, 'formRevisor'])->middleware('auth')->name('revisor.form');
-
+ 
+// lingue
+Route::post('/lingua/{lang}',[PublicController::class, 'setLanguage'])->name('set_language_locale');
 
 // TEST
 Route::post('/revisore/update',[RevisorController::class, 'update'])->name('revisor.update');

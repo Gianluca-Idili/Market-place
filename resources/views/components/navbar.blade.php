@@ -11,6 +11,20 @@
                 <li class="nav-item">
                     <a class="nav-link txtMain fs-5  " href="{{ route('article.index') }}">Tutti gli articoli</a>
                 </li>
+
+                {{-- bandierine --}}
+                <li class="nav-item">
+                   <x-_locale lang='it'  />
+                   
+                </li>
+                <li class="nav-item">
+                    <x-_locale lang='en' />
+                    
+                 </li>
+                 <li class="nav-item">
+                    <x-_locale lang='es'  />
+                </li>
+
                 {{-- se l'utente è revisore ed è loggato --}}
                 @if (Auth::user() && Auth::user()->is_revisor)
                     <li class="nav-item">
