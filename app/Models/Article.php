@@ -52,7 +52,7 @@ class Article extends Model
         return true;
     }
 
-    public function image(){
+    public function images(){
       return $this->hasMany(Image::class);
     }
 }

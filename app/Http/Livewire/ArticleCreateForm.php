@@ -12,7 +12,7 @@ class ArticleCreateForm extends Component
 {
     use WithFileUploads;
 
-    public $name, $price, $body, $article, $category_id, $categories, $image, $temporary_images;
+    public $name, $price, $body, $article, $category_id, $categories,  $image, $temporary_images;
     public $images = []; 
 
     protected $rules = [
@@ -41,23 +41,32 @@ class ArticleCreateForm extends Component
             }
         }
     }
-    // public function removeImage($key){
-    //     if(in_array($key,array_keys($this->images))){
-    //         unset($this->images[$key]);
-    //     }
-    // }
+
+    public function removeImage($key){
+        if(in_array($key,array_keys($this->images))){
+            unset($this->images[$key]);
+        }
+    }
+
     public function store(){
         // $this->article->user()->associate(Auth::user());
         //         $this->article->save();
         $this->validate();
+        $this->article = Category::find($this->category_id)->articles()->create($this->validate());
+        if(count($this->images)){
+            foreach($this->images as $image){
+                $this->article->images()->create(['path'=>$image->store('images', 'public')]);
+            }
+        }
+
         $article = $this->article =Auth::user()->articles()->create([
             'name' => $this->name,
             'price' => $this->price,
             'body' => $this->body,
             'category_id'=> $this->category_id,
         ]);
-        $this->clearForm();       
         session()->flash('articleCreated', 'hai creato corretamente l\'articolo');      
+        $this->clearForm();       
     }
 
     public function clearForm(){
