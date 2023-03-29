@@ -19,5 +19,6 @@ return [
  'mexagesNoView'=>'Messaggio non visualizzato',
  'register'=>'Registrati',
  'login'=>'Login',
- 'profile'=>'Profilo'
+ 'profile'=>'Profilo',
+ 'delete'=> 'Cancella',
 ];

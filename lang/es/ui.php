@@ -6,7 +6,7 @@ return [
 'lastListings'=>'Los ultimos seis añadidos',
 'wWu'=>' Trabaja con nosotros',
 'titleIndex'=>'Easy shopping, easy living ',
-'areaReviewer'=>'Area de recensore',
+'areaReviewer'=>'Revisor de àrea',
 'insertArticle'=>' Añadir articulos',
 'chooseFile'=>' Elejir file',
 'noAds'=>' No hay anuncios, añadir uno',
@@ -18,5 +18,6 @@ return [
 'mexagesNoView'=>'Mensaje no visualizado',
 'register'=>'Rejistrate',
 'login'=>'Login',
-'profile'=>'Perfile'
+'profile'=>'Perfil',
+'delete'=> 'Borrar',
 ];

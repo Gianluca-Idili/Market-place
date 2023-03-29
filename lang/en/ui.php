@@ -18,5 +18,6 @@ return [
 'mexagesNoView'=>'Message not displayed',
 'register'=>'Sign in',
 'login'=>'Login',
-'profile'=>'Profile'
+'profile'=>'Profile',
+'delete'=> 'Delete',
 ];
