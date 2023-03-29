@@ -24,7 +24,7 @@
             <div class="col-12">
                 {{-- <p>Ecco  tutti gli annunci</p> --}}
                 <div class="row justify-content-center">
-                    <h1 class=" text-center mt-5 txtMain fw-bold">{{__('ui.lastListings')}} <hr></h1>
+                    {{-- <h1 class=" text-center mt-5 txtMain fw-bold">{{__('ui.lastListings')}} <hr></h1> --}}
                     @foreach ($articles as $article)
                     <div class="col-12 col-md-3 text-center">
                         <div class="main-pro bg-white ">
@@ -33,7 +33,7 @@
                                     <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(1000,1000): 'https://picsum.photos/200'}}" alt="">    
                                     
                                 </div>
-                                <h3 class="mt-4 text-bold">{{ $article->name }}</h3>
+                                <h3 class="mt-4 text-bold text-center">{{ $article->name }}</h3>
                                 <p class="mb-1 text-bold text-italic">{{ $article->price }} €</p>
                                 <p class="text-italic">{{ Str::limit($article->body, 60) }}</p>
                                 <p>{{__('ui.categories')}} <a class="text-decoration-none text-bold"

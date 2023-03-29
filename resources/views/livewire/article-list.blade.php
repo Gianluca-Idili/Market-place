@@ -17,8 +17,8 @@
                     href="{{ route('article.show', compact('article')) }}">
                     <img class="customCard"  src="{{!$article->images()->get()->isEmpty() ?Storage::url($article->images()->first()->path): 'https://picsum.photos/200'}}" alt="">    
                                             
-                    <p class="text-start my-2 text-bold text-italic textCard fs-2 fw-bold">{{ $article->price }} €</p>
-                    <h3 class="text-start  text-bold textCard">{{ $article->name }}</h3>
+                    <p class="text-start my-2 text-bold text-italic  fs-2 fw-bold text-center">{{ $article->price }} €</p>
+                    <h3 class="text-start  text-bold  text-center">{{ $article->name }}</h3>
                     {{-- <p class="text-start text-italic textCard">{{ $article->body }}</p>  --}}
                 </a>
             @empty

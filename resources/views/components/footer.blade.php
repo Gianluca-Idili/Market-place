@@ -43,11 +43,11 @@
                 </div>
             </div>    
                 <div class="row justify-content-center bgFooter ">
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-left" src="https://picsum.photos/100" alt=""></div>
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-left" src="https://picsum.photos/100" alt=""></div>
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden" src="https://picsum.photos/100" alt=""></div>
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-right" src="https://picsum.photos/100" alt=""></div>
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-right" src="https://picsum.photos/100" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-left" src="{{asset('media\Gianluca.jpeg')}}" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-left" src="{{asset('media\Armando.PNG')}}" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden" src="{{asset('media\Francesco.jpeg')}}" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-right" src="{{asset('media\Eros.jpeg')}}" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-right " src="{{asset('media\Giambattista.jpeg')}}"alt=""></div>
                 </div>
         </section>
         <!-- Section: Links -->

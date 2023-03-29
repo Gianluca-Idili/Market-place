@@ -3,7 +3,7 @@
 return [
 'titleWelcome'=>'Your online shopping experience starts here, with an unrivaled selection of products' , 
 'allArticles'=>' All Articles',
-'lastListings'=>'Last four listings ',
+'lastListings'=>'Last uploaded ',
 'wWu'=>' Work with us',
 'titleIndex1'=>' Easy shopping,',
 'titleIndex2'=>' easy living',

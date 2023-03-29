@@ -3,7 +3,7 @@
 return [
  'titleWelcome'=>'La tua esperienza di shopping online inizia qui, con una selezione senza pari di prodotti' , 
  'allArticles'=>'Tutti gli articoli',
- 'lastListings'=>'Ultimi quattro inseriti ',
+ 'lastListings'=>'Ultimi  inseriti ',
  'wWu'=>' Lavora con noi',
  'titleIndex1'=>' Shopping facile,',
  'titleIndex2'=>' vita facile',
