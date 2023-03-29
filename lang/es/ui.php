@@ -3,7 +3,7 @@
 return [
 'titleWelcome'=>'Tu experiencia de shopping online comienza aquí, ¡con un sinfín de productos!' , 
 'allArticles'=>' Todos los productos',
-'lastListings'=>'Los ultimos seis añadidos',
+'lastListings'=>'Los ultimos cuatro añadidos',
 'wWu'=>' Trabaja con nosotros',
 'titleIndex1'=>' Easy shopping,',
 'titleIndex2'=>' easy living',

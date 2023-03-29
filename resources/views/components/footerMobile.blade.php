@@ -1,5 +1,5 @@
 <div class="container footerMobile fixed-bottom">
-    <div class="row justify-content-evenly bg-white py-3">
+    <div class="row justify-content-evenly bg-white py-1">
         <a href="{{ route('homepage') }}" class="col-2"><i class=" display-3 text-decoration-none txtMain"> <img
                     class="logoTrasp" src="{{url('media\logoblu.png')}}" alt=""></i></a>
         {{-- <a href="#" class="col-2"><i class=" display-3 text-decoration-none txtMain bi bi-cart4"></i></a> --}}

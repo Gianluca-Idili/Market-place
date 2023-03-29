@@ -9,10 +9,10 @@
         </div>
         @endif
         
-        <div class="container">
+        <div class="container-fluid my-5 sloganWelcome">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 bigTitle text-center">
-                    <h1 class="txtMain display-5 ">{{__('ui.titleWelcome')}}
+                    <h1 class="txtMain mt-0 mt-md-5 mb-5 mb-md-0 display-5 ">{{__('ui.titleWelcome')}}
                     </h1>
                 </div>
             </div>
@@ -26,9 +26,9 @@
                 <div class="row justify-content-center">
                     <h1 class=" text-center mt-5 txtMain fw-bold">{{__('ui.lastListings')}} <hr></h1>
                     @foreach ($articles as $article)
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-3 text-center">
                         <div class="main-pro bg-white ">
-                            <div class=" p-3 bg-white text-black body-card">
+                            <div class=" ms-1 ms-md-0 bg-white text-black body-card">
                                 <div >
                                     <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(1000,1000): 'https://picsum.photos/200'}}" alt="">    
                                     

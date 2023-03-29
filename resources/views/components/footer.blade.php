@@ -1,6 +1,6 @@
 <hr>
 <!-- Footer -->
-<footer class="bg-link text-center ">
+<footer class=" text-center ">
     <!-- Grid container -->
     <div class="container-fluid p-4">
 
@@ -30,7 +30,7 @@
         <!-- Section: Links -->
         <section class="">
             <!--Grid row-->
-            <div class="row justify-content-center my-2 my-md-5">
+            <div class="row  justify-content-center my-2 my-md-5">
 
                 <div class="col-12 col-md-2 ">
                 
@@ -42,25 +42,25 @@
                     </ul>
                 </div>
             </div>    
-                <div class="row justify-content-center">
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam" src="https://picsum.photos/100" alt=""></div>
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam" src="https://picsum.photos/100" alt=""></div>
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam" src="https://picsum.photos/100" alt=""></div>
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam" src="https://picsum.photos/100" alt=""></div>
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam" src="https://picsum.photos/100" alt=""></div>
+                <div class="row justify-content-center bgFooter ">
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-left" src="https://picsum.photos/100" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-left" src="https://picsum.photos/100" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden" src="https://picsum.photos/100" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-right" src="https://picsum.photos/100" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-right" src="https://picsum.photos/100" alt=""></div>
                 </div>
         </section>
         <!-- Section: Links -->
 
-    </div>
+  
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    <div class="text-center">
         © 2023 Copyright: presto.it
-        <a class="text-dark">www.presto.it</a>
+        <a class="text-dark text-decoration-none">www.presto.it</a>
     </div>
     <!-- Copyright -->
-
+  </div>
 </footer>
 <!-- Footer -->
