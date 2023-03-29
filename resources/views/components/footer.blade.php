@@ -2,7 +2,7 @@
 <!-- Footer -->
 <footer class="bg-link text-center ">
     <!-- Grid container -->
-    <div class="container p-4">
+    <div class="container-fluid p-4">
 
         <!-- Section: Social media -->
         <section class="mb-4">
@@ -30,46 +30,10 @@
         <!-- Section: Links -->
         <section class="">
             <!--Grid row-->
-            <div class="row">
-                <!--Grid column-->
-                {{-- <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5> --}}
+            <div class="row justify-content-center my-2 my-md-5">
 
-                    {{-- <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-dark">Link 1</a>
-                        </li>
-                    </ul> --}}
-                {{-- </div> --}}
-                <!--Grid column-->
-
-                <!--Grid column-->
-                {{-- <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5> --}}
-
-                    {{-- <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-dark">Link 1</a>
-                        </li>
-                    </ul> --}}
-                {{-- </div> --}}
-                <!--Grid column-->
-
-                <!--Grid column-->
-                {{-- <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-
-                    {{-- <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-dark">Link 1</a>
-                        </li>
-                    </ul> --}}
-                {{-- </div> --}}
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    {{-- <h5 class="text-uppercase">Links</h5> --}}
+                <div class="col-12 col-md-2 ">
+                
 
                     <ul class="list-unstyled mb-0">
                         <li>
@@ -77,9 +41,14 @@
                         </li>
                     </ul>
                 </div>
-                <!--Grid column-->
-            </div>
-            <!--Grid row-->
+            </div>    
+                <div class="row justify-content-center">
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam" src="https://picsum.photos/100" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam" src="https://picsum.photos/100" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam" src="https://picsum.photos/100" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam" src="https://picsum.photos/100" alt=""></div>
+                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam" src="https://picsum.photos/100" alt=""></div>
+                </div>
         </section>
         <!-- Section: Links -->
 

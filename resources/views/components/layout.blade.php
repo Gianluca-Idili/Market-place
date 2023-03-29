@@ -20,6 +20,16 @@
 </head>
 
 <body>
+    {{-- bandierine --}}
+    <div class="container-fluid linguePc">
+        <div class="row justify-content-end">
+            <div class="col-12 text-end me-4"> 
+                    <x-_locale lang='it'  />
+                    <x-_locale lang='en' />
+                    <x-_locale lang='es'  />
+            </div>
+        </div>
+    </div>
     <x-navbar />
 
     <div class="min-vh-100">

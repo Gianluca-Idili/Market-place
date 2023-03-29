@@ -283,3 +283,17 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.794) 0%, rgba(252, 181
   height: 400px;
  
 }
+.linguePc{
+
+display: none;
+}
+.lingueMobile{
+  display: flex;
+  justify-content: flex-end;
+}
+.fotoTeam{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+
+}

@@ -1,4 +1,4 @@
-<nav  class="navbar navbar-expand-lg bg-white mx-1 mx-md-5 mt-1 mt-md-5  mb-2 shadow hidden">
+<nav  class="navbar navbar-expand-lg bg-white mx-1 mx-md-5 mt-1 mt-md-1  mb-2 shadow hidden">
     <div class="container-fluid">
         <a class="navbar-brand mb-2 " href="{{ route('homepage') }}"><img class="logoHover" width="180"
                 src="\media\logo.png" alt=""></a>
@@ -8,21 +8,23 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link txtMain fs-5  " href="{{ route('article.index') }}">{{__('ui.allArticles')}}</a>
-                </li>
 
-                {{-- bandierine --}}
-                <li class="nav-item">
-                   <x-_locale lang='it'  />
-                   
-                </li>
-                <li class="nav-item">
+                
+                <li class=" lingueMobile">
+                    <div class="nav-item">
+                    <x-_locale lang='it'  />                   
+                </div>
+                <div class="nav-item">
                     <x-_locale lang='en' />
                     
-                 </li>
-                 <li class="nav-item">
+                </div>
+                <div class="nav-item">
                     <x-_locale lang='es'  />
+                </div>
+            </li>
+                {{-- bandierine --}}
+               <li class="nav-item">
+                    <a class="nav-link txtMain fs-5  " href="{{ route('article.index') }}">{{__('ui.allArticles')}}</a>
                 </li>
 
                 {{-- se l'utente è revisore ed è loggato --}}
@@ -57,7 +59,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         {{ Auth::user()->name }}
-                        <img style="width:50px; border-radius:50%" class="mx-3"
+                        <img style="width:50px; height:50px; border-radius:50%" class="mx-3"
                             src="{{ Storage::url(Auth::user()->avatar) }}" alt="">
                     </a>
                     <ul class="dropdown-menu ">
