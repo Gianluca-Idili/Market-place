@@ -40,7 +40,7 @@
                                                     data-bs-slide-to="2" aria-label="Slide 3"></button>
                                                 </div> --}}
                                                 <div >
-                                                    <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(100,100): 'https://picsum.photos/200'}}" alt="">    
+                                                    <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(1000,1000): 'https://picsum.photos/200'}}" alt="">    
                                                     
                                                 </div>
                                                 {{-- <button class="carousel-control-prev" type="button"

@@ -1,6 +1,5 @@
 <x-layout>
     <x-header>
-        <hr>
         <h1 class="text-center mt-5 txtMain ">Inserisci qui il tuo articolo</h1>
     </x-header>
 

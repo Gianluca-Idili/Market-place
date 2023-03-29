@@ -59,8 +59,31 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         {{ Auth::user()->name }}
+
+                      {{-- @if(Storage::exists(Auth::user()->avatar) )
                         <img style="width:50px; height:50px; border-radius:50%" class="mx-3"
-                            src="{{ Storage::url(Auth::user()->avatar) }}" alt="">
+                        src="{{ Storage::url(Auth::user()->avatar) }}" alt="">
+                      @else
+                        <img style="width:50px; height:50px; border-radius:50%" class="mx-3"
+                        src="{{asset('/public/media/2.jgp')}}" alt="">
+                      @endif --}}
+                      @if (Auth::user()->avatar == null)
+                      <img style="width:50px; height:50px; border-radius:50%" class="mx-3"
+                           src="{{ asset('media/avatarUser.png') }}" alt="">
+                  @else
+                      <img style="width:50px; height:50px; border-radius:50%" class="mx-3"
+                           src="{{ Storage::url(Auth::user()->avatar) }}" alt="">
+                  @endif
+
+
+
+
+
+
+
+
+
+
                     </a>
                     <ul class="dropdown-menu ">
                         <li><a class="dropdown-item" href="{{ route('user.profile') }}">{{__('ui.profile')}}</a></li>
