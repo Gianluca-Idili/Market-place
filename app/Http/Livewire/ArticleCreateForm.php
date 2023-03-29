@@ -59,13 +59,13 @@ class ArticleCreateForm extends Component
             }
         }
 
-        $article = $this->article =Auth::user()->articles()->create([
-            'name' => $this->name,
-            'price' => $this->price,
-            'body' => $this->body,
-            'category_id'=> $this->category_id,
-        ]);
-        session()->flash('articleCreated', 'hai creato corretamente l\'articolo');      
+        // $article = $this->article =Auth::user()->articles()->create([
+        //     'name' => $this->name,
+        //     'price' => $this->price,
+        //     'body' => $this->body,
+        //     'category_id'=> $this->category_id,
+        // ]);
+        return redirect(route('homepage'))->with('articleCreated', 'Hai creato corretamente l\'articolo');      
         $this->clearForm();       
     }
 

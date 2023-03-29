@@ -22,10 +22,16 @@
                             <button type="button" data-bs-target="#item-{{ $article_to_check->id }}"
                                 data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
+                        @if($article_to_check->images)
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="http://picsum.photos//300" class="d-block w-100" alt="...">
+                            @foreach ($article_to_check->images as $image)
+                                <div class="carousel-item @if($loop->first)active @endif">
+                                <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
                             </div>
+                            @endforeach
+                        </div>    
+                            @else
+                        <div>    
                             <div class="carousel-item">
                                 <img src="http://picsum.photos//301" class="d-block w-100" alt="...">
                             </div>
@@ -33,6 +39,7 @@
                                 <img src="http://picsum.photos//302" class="d-block w-100" alt="...">
                             </div>
                         </div>
+                        @endif
                         <button class="carousel-control-prev" type="button"
                             data-bs-target="#item-{{ $article_to_check->id }}" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
