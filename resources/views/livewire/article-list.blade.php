@@ -1,6 +1,6 @@
 <div class="container-fluid my-5">
     <div class="row picShow position-relative">
-        <h2 class="sloganIndex display-4 "> <br> vita facile.</h2>
+        <h2 class="sloganIndex display-4 ">{{__('ui.titleIndex1')}} <br>  {{__('ui.titleIndex2')}}.</h2>
         <div class="col-12">
 
         </div>

@@ -1,11 +1,11 @@
-.fontOne{
-  font-family: 'lora';
-  src: url(/public/fonts/Lora-Regular.ttf);
+
+@font-face {
+  font-family: 'Padauk';
+  src: url('/public/fonts/Padauk-Regular.ttf') format('truetype');
 }
-body{
-  font-family: 'lora';
-  src: url(/public/fonts/NunitoSans-Bold.ttf);
-  
+
+body {
+  font-family: 'Padauk', sans-serif;
 }
 hr{
   border-color: 1px solid var(--c-main);

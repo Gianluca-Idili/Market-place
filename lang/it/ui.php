@@ -5,8 +5,8 @@ return [
  'allArticles'=>'Tutti gli articoli',
  'lastListings'=>'Ultimi sei inseriti ',
  'wWu'=>' Lavora con noi',
- 'titleIndex1'=>' Easy shopping,',
- 'titleIndex2'=>' easy living',
+ 'titleIndex1'=>' Shopping facile,',
+ 'titleIndex2'=>' vita facile',
  'areaReviewer'=>'Area revisore',
  'insertArticle'=>' Inserisci articolo',
  'chooseFile'=>' Scegli file',
@@ -21,4 +21,5 @@ return [
  'login'=>'Login',
  'profile'=>'Profilo',
  'delete'=> 'Cancella',
+ 
 ];

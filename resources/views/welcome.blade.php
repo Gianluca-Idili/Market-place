@@ -12,7 +12,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 bigTitle text-center">
-                    <h1 class="txtMain display-5 fontTwo">{{__('ui.titleWelcome')}}
+                    <h1 class="txtMain display-5 ">{{__('ui.titleWelcome')}}
                     </h1>
                 </div>
             </div>
@@ -29,57 +29,31 @@
                     <div class="col-12 col-md-4">
                         <div class="main-pro bg-white ">
                             <div class=" p-3 bg-white text-black body-card">
-                                {{-- <div id="item-{{ $article->id }}" class="carousel slide" data-bs-ride="true">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#item-{{ $article->id }}"
-                                            data-bs-slide-to="0" class="active" aria-current="true"
-                                            aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#item-{{ $article->id }}"
-                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                                <button type="button" data-bs-target="#item-{{ $article->id }}"
-                                                    data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                                </div> --}}
-                                                <div >
-                                                    <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(1000,1000): 'https://picsum.photos/200'}}" alt="">    
-                                                    
-                                                </div>
-                                                {{-- <button class="carousel-control-prev" type="button"
-                                                data-bs-target="#item-{{ $article->id }}" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Previous</span>
-                                            </button>
-                                            <button class="carousel-control-next" type="button"
-                                            data-bs-target="#item-{{ $article->id }}" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div> --}}
-                                    {{-- <img src="http://picsum.photos//300" alt="immagine articolo"> --}}
-                                    {{-- <img src="{{Storage::url($article->cover)}}" alt="immagine articolo"> --}}
-                                    <h3 class="mt-4 text-bold">{{ $article->name }}</h3>
-                                    <p class="mb-1 text-bold text-italic">{{ $article->price }} €</p>
-                                    <p class="text-italic">{{ Str::limit($article->body, 60) }}</p>
-                                    <p>{{__('ui.categories')}} <a class="text-decoration-none text-bold"
-                                        href="{{ route('category.show', ['category' => $article->category]) }}">{{ $article->category->name }}</a>
-                                    </p>
-                                    <p>{{__('ui.published')}} {{ $article->created_at->format('d/m/Y') }}</p>
-                                    <a class="btn btn-addArt ms-4 mb-5"
-                                    href="{{ route('article.show', ['article' => $article]) }}">{{__('ui.viewMore')}}</a>
+                                <div >
+                                    <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(1000,1000): 'https://picsum.photos/200'}}" alt="">    
+                                    
                                 </div>
-                                
-                                
-                            </div>
+                                <h3 class="mt-4 text-bold">{{ $article->name }}</h3>
+                                <p class="mb-1 text-bold text-italic">{{ $article->price }} €</p>
+                                <p class="text-italic">{{ Str::limit($article->body, 60) }}</p>
+                                <p>{{__('ui.categories')}} <a class="text-decoration-none text-bold"
+                                    href="{{ route('category.show', ['category' => $article->category]) }}">{{ $article->category->name }}</a>
+                                </p>
+                                <p>{{__('ui.published')}} {{ $article->created_at->format('d/m/Y') }}</p>
+                                <a class="btn btn-addArt ms-4 mb-5"
+                                href="{{ route('article.show', ['article' => $article]) }}">{{__('ui.viewMore')}}</a>
+                            </div>                           
                         </div>
-                        @endforeach
                     </div>
+                    @endforeach
                 </div>
-                
             </div>
+            
         </div>
-        
-        
-        
-        
-        
-    </x-layout>
+    </div>
     
+    
+    
+    
+    
+</x-layout>
