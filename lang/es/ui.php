@@ -1,18 +1,22 @@
 <?php
 
 return [
- 'titleWelcome'=>'Su experiencia de compra en línea comienza aquí, con una selección de productos ' , 
-'allArticles'=>' All Articles',
-'lastListings'=>'Last six listings ',
-'wWu'=>' Work with us',
-'titleIndex'=>' Easy shopping, easyliving',
-'areaReviewer'=>'Reviewer area',
-'insertArticle'=>' insert article',
-'chooseFile'=>' choose file',
-'noAds'=>' There are no ads.Post one',
-'add'=>' Add',
-'exploreCategory'=>' Explore the category',
-
-
-
+'titleWelcome'=>'Tu experiencia de shopping online comienza aquí, ¡con un sinfín de productos!' , 
+'allArticles'=>' Todos los productos',
+'lastListings'=>'Los ultimos seis añadidos',
+'wWu'=>' Trabaja con nosotros',
+'titleIndex'=>' Comprar facil, vivir facil',
+'areaReviewer'=>'Area de recensore',
+'insertArticle'=>' Añadir articulos',
+'chooseFile'=>' Elejir file',
+'noAds'=>' No hay anuncios, añadir uno',
+'add'=>' Añádir',
+'exploreCategory'=>' Esplora las categorias',
+'viewMore'=>'Ver mas',
+'categories'=>'Categorias',
+'published' =>'Publicado el',
+'mexagesNoView'=>'Mensaje no visualizado',
+'register'=>'Rejistrate',
+'login'=>'Login',
+'profile'=>'Perfile'
 ];

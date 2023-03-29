@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link txtMain fs-5  " href="{{ route('article.index') }}">Tutti gli articoli</a>
+                    <a class="nav-link txtMain fs-5  " href="{{ route('article.index') }}">{{__('ui.allArticles')}}</a>
                 </li>
 
                 {{-- bandierine --}}
@@ -28,11 +28,11 @@
                 {{-- se l'utente è revisore ed è loggato --}}
                 @if (Auth::user() && Auth::user()->is_revisor)
                     <li class="nav-item">
-                        <a class="nav-link txtMain fs-5 position-relative" href="{{ route('revisor.index') }}">Area Revisore
+                        <a class="nav-link txtMain fs-5 position-relative" href="{{ route('revisor.index') }}">{{__('ui.areaReviewer')}}
                             <span class=" spanRevisor translate-middle badge rounded-pill">
                                 {{ App\Models\Article::toBeRevisionedCount() }}
                                 <span class="visually-hidden">
-                                    Messaggi non visualizzati
+                                    {{__('ui.mexagesNoVie')}}
                                 </span>
                             </span>
                         </a>
@@ -45,14 +45,13 @@
                         Guest
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
-                        <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
+                        <li><a class="dropdown-item" href="{{ route('register') }}">{{__('ui.register')}}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('login') }}">{{__('ui.login')}}</a></li>
                     </ul>
                 </div>
             @else
                 <div class="nav-item  fs-5 addArtPc">
-                    <a class="nav-link mb-2  btn-addArt" aria-current="page" href="{{ route('article.create') }}">Inserisci
-                        articolo</a>
+                    <a class="nav-link mb-2  btn-addArt" aria-current="page" href="{{ route('article.create') }}">{{__('ui.insertArticle')}}</a>
                 </div>
                 <div class="nav-item dropdown me-3 fs-5">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -62,7 +61,7 @@
                             src="{{ Storage::url(Auth::user()->avatar) }}" alt="">
                     </a>
                     <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item" href="{{ route('user.profile') }}">Profilo</a></li>
+                        <li><a class="dropdown-item" href="{{ route('user.profile') }}">{{__('ui.profile')}}</a></li>
                         <li><a class="dropdown-item" href=""
                                 onclick="event.preventDefault();document.querySelector('#form-logout').submit()">Logout</a>
                         </li>

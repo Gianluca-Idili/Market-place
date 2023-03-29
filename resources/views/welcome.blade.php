@@ -24,7 +24,7 @@
             <div class="col-12">
                 {{-- <p>Ecco  tutti gli annunci</p> --}}
                 <div class="row justify-content-center">
-                    <h1 class=" text-center mt-5 txtMain fw-bold">Ultime sei inserzioni: <hr></h1>
+                    <h1 class=" text-center mt-5 txtMain fw-bold">{{__('ui.lastListings')}} <hr></h1>
                     @foreach ($articles as $article)
                         <div class="col-12 col-md-4">
                             <div class="main-pro bg-white shadow-card">
@@ -69,12 +69,12 @@
                                     <h3 class="mt-4 text-bold">{{ $article->name }}</h3>
                                     <p class="mb-1 text-bold text-italic">{{ $article->price }} €</p>
                                     <p class="text-italic">{{ Str::limit($article->body, 60) }}</p>
-                                    <p>Categorie: <a class="text-decoration-none text-bold"
+                                    <p>{{__('ui.categories')}} <a class="text-decoration-none text-bold"
                                             href="{{ route('category.show', ['category' => $article->category]) }}">{{ $article->category->name }}</a>
                                     </p>
-                                    <p>Pubblicato il {{ $article->created_at->format('d/m/Y') }}</p>
+                                    <p>{{__('ui.published')}} {{ $article->created_at->format('d/m/Y') }}</p>
                                     <a class="btn btn-outline-dark ms-4 mb-5"
-                                        href="{{ route('article.show', ['article' => $article]) }}">vedi di più..</a>
+                                        href="{{ route('article.show', ['article' => $article]) }}">{{__('ui.viewMore')}}</a>
                                 </div>
 
 
