@@ -49,8 +49,7 @@ class ArticleCreateForm extends Component
     }
 
     public function store(){
-        // $this->article->user()->associate(Auth::user());
-        //         $this->article->save();
+        
         $this->validate();
         $this->article = Category::find($this->category_id)->articles()->create($this->validate());
         if(count($this->images)){
@@ -58,7 +57,8 @@ class ArticleCreateForm extends Component
                 $this->article->images()->create(['path'=>$image->store('images', 'public')]);
             }
         }
-
+            $this->article->user()->associate(Auth::user());
+            $this->article->save();
         // $article = $this->article =Auth::user()->articles()->create([
         //     'name' => $this->name,
         //     'price' => $this->price,

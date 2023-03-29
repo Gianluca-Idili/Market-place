@@ -27,9 +27,9 @@
                     <h1 class=" text-center mt-5 txtMain fw-bold">{{__('ui.lastListings')}} <hr></h1>
                     @foreach ($articles as $article)
                         <div class="col-12 col-md-4">
-                            <div class="main-pro bg-white shadow-card">
+                            <div class="main-pro bg-white ">
                                 <div class=" p-3 bg-white text-black body-card">
-                                    <div id="item-{{ $article->id }}" class="carousel slide" data-bs-ride="true">
+                                    {{-- <div id="item-{{ $article->id }}" class="carousel slide" data-bs-ride="true">
                                         <div class="carousel-indicators">
                                             <button type="button" data-bs-target="#item-{{ $article->id }}"
                                                 data-bs-slide-to="0" class="active" aria-current="true"
@@ -38,22 +38,12 @@
                                                 data-bs-slide-to="1" aria-label="Slide 2"></button>
                                             <button type="button" data-bs-target="#item-{{ $article->id }}"
                                                 data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div> --}}
+                                        <div >
+                                                 <img class="customCard" src="{{!$article->images()->get()->isEmpty() ?Storage::url($article->images()->first()->path): 'https://picsum.photos/200'}}" alt="">    
+                                            
                                         </div>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="http://picsum.photos//300" class="d-block w-100"
-                                                    alt="...">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="http://picsum.photos//301" class="d-block w-100"
-                                                    alt="...">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="http://picsum.photos//302" class="d-block w-100"
-                                                    alt="...">
-                                            </div>
-                                        </div>
-                                        <button class="carousel-control-prev" type="button"
+                                        {{-- <button class="carousel-control-prev" type="button"
                                             data-bs-target="#item-{{ $article->id }}" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Previous</span>
@@ -63,7 +53,7 @@
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Next</span>
                                         </button>
-                                    </div>
+                                    </div> --}}
                                     {{-- <img src="http://picsum.photos//300" alt="immagine articolo"> --}}
                                     {{-- <img src="{{Storage::url($article->cover)}}" alt="immagine articolo"> --}}
                                     <h3 class="mt-4 text-bold">{{ $article->name }}</h3>
@@ -73,7 +63,7 @@
                                             href="{{ route('category.show', ['category' => $article->category]) }}">{{ $article->category->name }}</a>
                                     </p>
                                     <p>{{__('ui.published')}} {{ $article->created_at->format('d/m/Y') }}</p>
-                                    <a class="btn btn-outline-dark ms-4 mb-5"
+                                    <a class="btn btn-addArt ms-4 mb-5"
                                         href="{{ route('article.show', ['article' => $article]) }}">{{__('ui.viewMore')}}</a>
                                 </div>
 

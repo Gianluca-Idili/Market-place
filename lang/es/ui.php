@@ -5,7 +5,7 @@ return [
 'allArticles'=>' Todos los productos',
 'lastListings'=>'Los ultimos seis añadidos',
 'wWu'=>' Trabaja con nosotros',
-'titleIndex'=>' Comprar facil, vivir facil',
+'titleIndex'=>'Easy shopping, easy living ',
 'areaReviewer'=>'Area de recensore',
 'insertArticle'=>' Añadir articulos',
 'chooseFile'=>' Elejir file',
