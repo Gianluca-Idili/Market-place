@@ -1,18 +1,14 @@
 {
-  "public/fonts/Lora-Regular.ttf": {
-    "file": "assets/Lora-Regular-da0ddfdf.ttf",
-    "src": "public/fonts/Lora-Regular.ttf"
-  },
-  "public/fonts/NunitoSans-Bold.ttf": {
-    "file": "assets/NunitoSans-Bold-260bcd4e.ttf",
-    "src": "public/fonts/NunitoSans-Bold.ttf"
+  "public/fonts/Padauk-Regular.ttf": {
+    "file": "assets/Padauk-Regular-7359441d.ttf",
+    "src": "public/fonts/Padauk-Regular.ttf"
   },
   "public/media/1.jpg": {
     "file": "assets/1-6cfc7ca1.jpg",
     "src": "public/media/1.jpg"
   },
   "resources/css/app.css": {
-    "file": "assets/app-2412d19c.css",
+    "file": "assets/app-bd5747a8.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
