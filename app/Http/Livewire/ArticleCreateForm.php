@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\GoolgleVisionSafeSearch;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
@@ -59,7 +60,9 @@ class ArticleCreateForm extends Component
             foreach($this->images as $image){
                 $newFileName="articles/{$this->article->id}";
                 $newImage=$this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
+
                 dispatch(new ResizeImage($newImage->path,1000,1000));
+                dispatch (new GoolgleVisionSafeSearch($newImage->id));
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
