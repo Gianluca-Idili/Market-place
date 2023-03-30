@@ -15,7 +15,7 @@
             @forelse($articles as $article)
                 <a class="col-12 col-md-6 col-lg-3 text-center text-decoration-none txtMain my-5"
                     href="{{ route('article.show', compact('article')) }}">
-                    <img class="customCard"  src="{{!$article->images()->get()->isEmpty() ?Storage::url($article->images()->first()->path): 'https://picsum.photos/200'}}" alt="">    
+                    <img class="customCard"  src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(500, 500) : 'https://picsum.photos/500'}}" alt="">    
                                             
                     <p class="text-start my-2 text-bold text-italic  fs-2 fw-bold text-center">{{ $article->price }} €</p>
                     <h3 class="text-start  text-bold  text-center">{{ $article->name }}</h3>

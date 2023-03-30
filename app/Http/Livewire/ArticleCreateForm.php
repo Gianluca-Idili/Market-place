@@ -62,7 +62,10 @@ class ArticleCreateForm extends Component
                 $newFileName="articles/{$this->article->id}";
                 $newImage=$this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
-                dispatch(new ResizeImage($newImage->path,1000,1000));
+                $watermark = public_path('media\watermark_Presto.png');
+
+
+                dispatch(new ResizeImage($newImage->path,500,500));
                 dispatch (new GoolgleVisionSafeSearch($newImage->id));
                 dispatch (new GoogleVisionLabelImage($newImage->id));
             }
