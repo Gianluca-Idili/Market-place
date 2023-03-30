@@ -28,5 +28,4 @@ class Image extends Model
     public function getUrl($w = null, $h = null) {
     return Image::getUrlByFilePath($this->path, $w, $h);
     }
-    
 }

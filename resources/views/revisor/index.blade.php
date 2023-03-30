@@ -22,23 +22,24 @@
                             <button type="button" data-bs-target="#item-{{ $article_to_check->id }}"
                                 data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
-                        @if($article_to_check->images)
-                        <div class="carousel-inner">
-                            @foreach ($article_to_check->images as $image)
-                                <div class="carousel-item @if($loop->first)active @endif">
-                                <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
+                        @if ($article_to_check->images)
+                            <div class="carousel-inner">
+                                @foreach ($article_to_check->images as $image)
+                                    <div class="carousel-item @if ($loop->first) active @endif">
+                                        <img src="{{ Storage::url($image->path) }}" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                @endforeach
                             </div>
-                            @endforeach
-                        </div>    
-                            @else
-                        <div>    
-                            <div class="carousel-item">
-                                <img src="http://picsum.photos//301" class="d-block w-100" alt="...">
+                        @else
+                            <div>
+                                <div class="carousel-item">
+                                    <img src="http://picsum.photos//301" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="http://picsum.photos//302" class="d-block w-100" alt="...">
+                                </div>
                             </div>
-                            <div class="carousel-item">
-                                <img src="http://picsum.photos//302" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
                         @endif
                         <button class="carousel-control-prev" type="button"
                             data-bs-target="#item-{{ $article_to_check->id }}" data-bs-slide="prev">
@@ -73,7 +74,35 @@
                         </form>
 
                     </div>
+
+
+                    {{-- @if ($article_to_check->images) --}}
+                        @foreach ($article_to_check->images as $image)
+                            <div class="col-md-3">
+                                <div class="card-body">
+                                    <h5 class="">Revisione immagini</h5>
+                                    {{-- @dd($image->adult) --}}
+                                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                                    <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                                    <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                                    <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                                    <p>Contenuto ammiccante: <span class="{{$image->racy}}"></span></p>
+                                </div>
+                                <div class="col-md-3 border-end">
+                                    <h5 class="tc-accent mt-3">Tags</h5>
+                                    <div class="p-2">
+                                        @if ($image->labels)
+                                            @foreach ($image->labels as $label)
+                                                <p class="d-inline">{{$label}}</p>
+                                            @endforeach
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    {{-- @endif --}}
                 </div>
+
             </div>
         </div>
     @endif
