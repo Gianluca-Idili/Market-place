@@ -37,9 +37,7 @@ class UserController extends Controller
 
     public function edit()
         {
-        //     if($user->id != Auth::id()){
-        //     return redirect(route('homepage'))->with('accessDenied', 'Non sei autorizzato ad accedere a questa pagina!');
-        // }
+            
             return view('user.edit', ['user' => Auth::user()]);
         }
 
@@ -63,6 +61,7 @@ class UserController extends Controller
             $user->save();
             return redirect(route('user.profile'))->with('userUpdated', 'hai modificato corretamente il tuo profilo');
         }
+        
 
     public function destroy(){
         $user_articles= Auth::user()->articles;
@@ -72,7 +71,7 @@ class UserController extends Controller
                 'user_id' =>1
             ]);
           }
-        
+          
 
         Auth::user()->delete();
         return redirect(route('homepage'))->with('userDeleted', 'utente rimosso');

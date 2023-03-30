@@ -23,10 +23,16 @@
                 </div>
                 <div class="mb-3">
                   <label for="avatar" class="form-label">Scegli un immagine</label>
-                  <input type="file" name="avatar" class="form-control" id="avatar">
+                  <input type="file" name="avatar" class="form-control" id="avatar"value="{{$user->avatar}}">
                 </div>
                 <button type="submit" class="btn btn-outline-warning my-5">Conferma le modifiche</button>
               </form>
+              <div class="col-3 d-flex mt-5 justify-content-center mx-auto my-auto flex-column">
+                <h2 class="display-5 mx-auto mb-3 fw-bold">Immagini attuali</h2> 
+                <div class="mb-3 mx-auto">
+                  <h3 class="text-center pt-2 fs-3"> foto profilo</h3>
+                  <img src="{{Storage::url($user->avatar)}}" width="250px" height="150" alt="">
+                </div>
             </div>
           </div>
         

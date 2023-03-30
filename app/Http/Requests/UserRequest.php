@@ -22,7 +22,7 @@ class UserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'avatar' =>'required',
+            'avatar' =>'nullable',
         ];
     }
     
