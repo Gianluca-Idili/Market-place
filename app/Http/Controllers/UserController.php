@@ -7,6 +7,7 @@ use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {    
@@ -33,6 +34,36 @@ class UserController extends Controller
         ]);
         return redirect()->back()->with('avatarChange', 'Hai cambiato con successo la tua foto profilo!');
     }
+
+    public function edit()
+        {
+        //     if($user->id != Auth::id()){
+        //     return redirect(route('homepage'))->with('accessDenied', 'Non sei autorizzato ad accedere a questa pagina!');
+        // }
+            return view('user.edit', ['user' => Auth::user()]);
+        }
+
+        public function update(UserRequest $request)
+        {
+            $user = Auth::user();
+            $request->validate([
+                'name' => ['required', 'string', 'max:255'],
+                'avatar' => ['nullable', 'image', 'max:1024'],
+
+            ]);
+            $user->name = $request->input('name');
+            if($request->hasFile('avatar')){
+                $avatar = $request->file('avatar')->store('public/avatars');
+                if($user->avatar && $user->avatar !== null){
+
+                    Storage::delete($user->avatar);
+                }
+                $user->avatar = $avatar;
+            }
+            $user->save();
+            return redirect(route('user.profile'))->with('userUpdated', 'hai modificato corretamente il tuo profilo');
+        }
+
     public function destroy(){
         $user_articles= Auth::user()->articles;
 

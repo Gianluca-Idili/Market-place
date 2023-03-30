@@ -3,6 +3,12 @@
         <div class="row mt-5">
             
             <div class="col-12 col-md-6">
+                @if (session()->has('userUpdated'))
+                <div class="alert alert-success alert-dismissible fade show border-start border-end" role="alert">
+                    {{ session('userUpdated') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
                 @if (session()->has('avatarChange'))
                 <div class="alert alert-success alert-dismissible fade show border-start border-end" role="alert">
                     {{session('avatarChange')}}
@@ -33,6 +39,11 @@
                     <i class="bi bi-gear-fill display-6"></i>
                 </a>
                 <ul class="dropdown-menu fs-5">
+                    <li>  
+                        <a class="btn btn-warning ms-4 mb-5"
+                        href="{{ route('user.edit')}}">Modifica
+                    </a>
+                    </li>
                     <li>
                         <form class="mt-3 dropdown-item " method="POST" action="{{ route('user.destroy') }}">
                             @csrf

@@ -34,6 +34,8 @@ Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name(
 //UserController
 Route::get('/user/profile', [UserController::class, 'profile'])->middleware('auth')->name('user.profile');
 Route::delete('/user/destroy', [UserController::class, 'destroy'])->name('user.destroy');
+Route::get('/user/edit', [UserController::class, 'edit'])->name('user.edit');
+Route::put('/user/update', [UserController::class, 'update'])->name('user.update');
 Route::put('/user/avatar/{user}', [UserController::class, 'avatar'])->name('avatar');
 
 

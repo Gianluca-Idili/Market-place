@@ -8,10 +8,10 @@
             <div class="col-12 col-md-6">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                     <div class="carousel-indicators">
-                            @foreach($article->images as $index => $image)
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$index}}"
-                                    @if($loop->first)class="active" aria-current="true"@endif aria-label="Slide"></button>
-                            @endforeach  
+                        @foreach($article->images as $index => $image)
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$index}}"
+                                @if($loop->first)class="active" aria-current="true"@endif aria-label="Slide"></button>
+                        @endforeach  
                     </div>
                     @if($article->images)
                     <div class="carousel-inner">
