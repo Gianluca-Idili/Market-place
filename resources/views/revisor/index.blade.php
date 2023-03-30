@@ -78,8 +78,8 @@
 
                     {{-- @if ($article_to_check->images) --}}
                         @foreach ($article_to_check->images as $image)
-                            <div class="col-md-3">
-                                <div class="card-body">
+                            <div class="col-md-6">
+                                <div class="">
                                     <h5 class="">Revisione immagini</h5>
                                     {{-- @dd($image->adult) --}}
                                     <p>Adulti: <span class="{{$image->adult}}"></span></p>
@@ -88,8 +88,8 @@
                                     <p>Violenza: <span class="{{$image->violence}}"></span></p>
                                     <p>Contenuto ammiccante: <span class="{{$image->racy}}"></span></p>
                                 </div>
-                                <div class="col-md-3 border-end">
-                                    <h5 class="tc-accent mt-3">Tags</h5>
+                                <div class="col-12 border-end">
+                                    <h5 class=" mt-3">Tags</h5>
                                     <div class="p-2">
                                         @if ($image->labels)
                                             @foreach ($image->labels as $label)

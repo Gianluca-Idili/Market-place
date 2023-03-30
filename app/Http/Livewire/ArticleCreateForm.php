@@ -2,14 +2,15 @@
 
 namespace App\Http\Livewire;
 
-use App\Jobs\GoolgleVisionSafeSearch;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionLabelImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use App\Jobs\GoolgleVisionSafeSearch;
 
 
 class ArticleCreateForm extends Component
@@ -63,6 +64,7 @@ class ArticleCreateForm extends Component
 
                 dispatch(new ResizeImage($newImage->path,1000,1000));
                 dispatch (new GoolgleVisionSafeSearch($newImage->id));
+                dispatch (new GoogleVisionLabelImage($newImage->id));
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
