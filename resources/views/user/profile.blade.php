@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row mt-5">
             
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 d-flex mb-5">
                 @if (session()->has('userUpdated'))
                 <div class="alert alert-success alert-dismissible fade show border-start border-end" role="alert">
                     {{ session('userUpdated') }}
@@ -24,15 +24,24 @@
                     </ul>
                 </div>
                 @endif
-                <form class="my-5" action="{{ route('avatar', ['user' => Auth::user()]) }}" method="POST"
+                
+                @if (Auth::user()->avatar == null)
+                <img style="width:50px; height:50px; border-radius:50%" class="mx-3"
+                    src="{{ asset('media/avatarUser.png') }}" alt="">
+            @else
+                <img style="width:50px; height:50px; border-radius:50%" class="mx-3"
+                    src="{{ Storage::url(Auth::user()->avatar) }}" alt="">
+            @endif
+            <h1 class="mx-5">{{Auth::user()->name}}</h1>
+                {{-- <form class="my-5" action="{{ route('avatar', ['user' => Auth::user()]) }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     @method('put')
                     <input type="file" name="avatar" class="form-controll">
-                    <button type="submit" class="btn btn-primary">{{__('ui.insertImage')}}</button>
-                </form>
+                    <button type="submit" class="btn btn-addArt">{{__('ui.insertImage')}}</button>
+                </form> --}}
             </div>
-        <div class="col-12 col-md-6 d-flex my-auto">
+        <div class="col-12 col-md-6 d-flex justify-content-end ">               
             <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
@@ -40,7 +49,7 @@
                 </a>
                 <ul class="dropdown-menu fs-5">
                     <li>  
-                        <a class="btn btn-warning ms-4 mb-5"
+                        <a class="btn btn-addArt ms-4 mb-5"
                         href="{{ route('user.edit')}}">{{__('ui.edit')}}
                     </a>
                     </li>
@@ -74,9 +83,9 @@
                         <p class=" fw-bold fst-italic">{{ $article->user->name }}</p>
                     </p>
                     <a href="{{ route('article.show', compact('article')) }}"
-                    class="btn btn-primary me-3">{{__('ui.viewMore')}}</a>
+                    class="btn btn-addArt me-3">{{__('ui.viewMore')}}</a>
                     <a href="{{ route('article.edit', compact('article')) }}"
-                    class="btn btn-primary me-3">Modifica</a>
+                    class="btn btn-addArt me-3">{{__('ui.edit')}}</a>
                 </div>
             </div>
         </div>

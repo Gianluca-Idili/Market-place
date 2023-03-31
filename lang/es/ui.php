@@ -19,7 +19,7 @@ return [
 'mexagesNoView'=>'Mensaje no visualizado',
 'register'=>'Rejistrate',
 'login'=>'Login',
-'e-mail'=>'dirección de correo electrónico',
+'e-mail'=>'Correo electrónico',
 'profile'=>'Perfil',
 'delete'=> 'Borrar',
 'noNewArticlesRew'=> 'Noy hay articlus por revisar',
@@ -44,7 +44,7 @@ return [
 'publishedBy'=>' Publicado por:',
 'becameRevisor'=>'Háganos saber por qué quiere convertirse en nuestro revisor',
 'submit'=>'Enviar',
-'deleteProfile'=>'¿Está seguro de que desea eliminar el perfil?',
+'deleteProfile'=>'Eliminar el perfil',
 'editYourProfile'=>'Editar el perfil',
 'confirmEdit'=>'Confirmar cambio ',
 'currentImg'=>'Imagen actual',
@@ -62,7 +62,8 @@ return [
 'signIn'=>'Iniciar sesión',
 'ifNotReg'=>'Si no estás registrado:',
 'insertBy'=>'Publicado por',
-'uploadedOn'=>'Subido en :'
+'uploadedOn'=>'Subido en :',
+'password'=>'Contraseña',
 ];
 
 

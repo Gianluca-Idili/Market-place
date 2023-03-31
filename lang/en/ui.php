@@ -28,7 +28,7 @@ return [
 'reject'=> 'Reject',
 'imageReviewer'=> 'Images reviewer',
 'confirm'=> 'Confirm',
-'e-mail'=>'E-mail adress',
+'e-mail'=>'E-mail address',
 'goBack'=> 'Go Back',
 'areYouSureConf'=> 'Are you sure to confirm the last operation?',
 'insertHereYourArticle'=>' Insert your article',
@@ -44,7 +44,7 @@ return [
 'publishedBy'=>' Published by:',
 'becameRevisor'=>'Let us know why you want to become our reviewer',
 'submit'=>'Submit',
-'deleteProfile'=>'Are you sure you want to delete the profile?',
+'deleteProfile'=>'Delete profile',
 'editYourProfile'=>'edit your profile',
 'confirmEdit'=>'Confirm change',
 'currentImg'=>'Current image',
@@ -62,5 +62,6 @@ return [
 'signIn'=>'Sign in',
 'ifNotReg'=>'If you are not registered',
 'insertBy'=>'Post by :',
-'uploadedOn'=>'Uploaded on :'
+'uploadedOn'=>'Uploaded on :',
+'password'=>'Password',
 ];
