@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-        <h1 class="text-center mt-5">Accedi</h1>
+        <h1 class="text-center mt-5">{{__('ui.signIn')}} </h1>
     </x-header>
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
@@ -18,7 +18,7 @@
                 <form class=" shadow p-5" action="{{ route('login') }}" method="POST">
                     @csrf
                     <div class="mb-3">
-                        <label for="email" class="form-label">Indirizzo e-mail</label>
+                        <label for="email" class="form-label">{{__('ui.email')}} </label>
                         <input type="email" name="email" class="form-control" id="email"
                             aria-describedby="emailHelp">
 
@@ -31,10 +31,10 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Ricordami</label>
                     </div> --}}
-                    <button type="submit" class="btn btn-warning shadow">Accedi</button>
+                    <button type="submit" class="btn btn-warning shadow">{{__('ui.signIn')}} </button>
                     <div class="d-flex my-5 justify-content-evenly ">
-                        <p class="mx-3 fs-4">Se non sei registrato:</p>
-                        <a class="btn btn-secondary mb-5 shadow" href="{{ route('register') }}">Registrati</a>
+                        <p class="mx-3 fs-4">{{__('ui.ifNotReg')}}</p>
+                        <a class="btn btn-secondary mb-5 shadow" href="{{ route('register') }}">{{__('ui.register')}}</a>
                     </div>
                     
                 </form>

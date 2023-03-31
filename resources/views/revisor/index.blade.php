@@ -82,11 +82,11 @@
                                 <div class="">
                                     <h5 class="">{{__('ui.imageReviewer')}}</h5>
                                     {{-- @dd($image->adult) --}}
-                                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                                    <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                                    <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                                    <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                                    <p>Contenuto ammiccante: <span class="{{$image->racy}}"></span></p>
+                                    <p>{{__('ui.adult')}} <span class="{{$image->adult}}"></span></p>
+                                    <p>{{__('ui.spoof')}} <span class="{{$image->spoof}}"></span></p>
+                                    <p>{{__('ui.medical')}} <span class="{{$image->medical}}"></span></p>
+                                    <p>{{__('ui.violence')}} <span class="{{$image->violence}}"></span></p>
+                                    <p>{{__('ui.racy')}} <span class="{{$image->racy}}"></span></p>
                                 </div>
                                 <div class="col-12 border-end">
                                     <h5 class=" mt-3">Tags</h5>

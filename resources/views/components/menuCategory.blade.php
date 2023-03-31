@@ -17,13 +17,13 @@
             <li class="nav-item dropdown fs-5 categoryForMobile">
                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    Categorie
+                  {{__('ui.categories')}}
                 </a>
                 <ul class="dropdown-menu">
                 @foreach ($categories as $category)
                 <li><a class="dropdown-item" href="{{ route('category.show', compact('category'))}}">{{$category->name }}</a></li>
                 @endforeach
-                <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
+                <li><a class="dropdown-item" href="{{ route('register') }}">{{__('ui.register')}} </a></li>
                 <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
                 </ul>
             </li>

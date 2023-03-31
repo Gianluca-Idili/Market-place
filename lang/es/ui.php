@@ -9,7 +9,7 @@ return [
 'titleIndex2'=>' easy living',
 'areaReviewer'=>'Revisor de àrea',
 'insertArticle'=>' Añadir articulos',
-'chooseFile'=>' Elejir file',
+'chooseImage'=>' Elejir imajen',
 'noAds'=>' No hay anuncios, añadir uno',
 'add'=>' Añádir',
 'exploreCategory'=>' Esplora las categorias',
@@ -37,7 +37,33 @@ return [
 'description'=> 'Description',
 'insert'=> 'Añadir',
 'selectCategory'=> 'Seleciona una categoria',
-
-
-
+'insertImage'=>' Añadir imagen',
+'edit'=>'Editar',
+'deleteProfile'=>'Cancelar perfil',
+'publishedBy'=>' Publicado por:',
+'becameRevisor'=>'Háganos saber por qué quiere convertirse en nuestro revisor',
+'submit'=>'Enviar',
+'deleteProfile'=>'¿Está seguro de que desea eliminar el perfil?',
+'editYourProfile'=>'Editar el perfil',
+'confirmEdit'=>'Confirmar cambio ',
+'currentImg'=>'Imagen actual',
+'imgProfil'=>'Foto de perfil',
+'noArticles'=>'Lo sentimos, pero actualmente no hay articulos',
+'adult'=>'Adultos',
+'spoof'=>'Satira:',
+'medical'=>'Medicina:',
+'violence'=>'Violencia:',
+'racy'=>'Racismo',
+'noArticle'=>'No hay anuncios.',
+'publishArticle'=>'Publicar uno:',
+'username'=>'Nombre de usuario',
+'confirmPass'=>'Confirmar contraseña',
+'signIn'=>'Iniciar sesión',
+'ifNotReg'=>'Si no estás registrado:',
+'insertBy'=>'Publicado por',
+'uploadedOn'=>'Subido en :'
 ];
+
+
+
+

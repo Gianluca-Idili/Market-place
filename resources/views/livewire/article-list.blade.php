@@ -23,7 +23,7 @@
                 </a>
             @empty
                 <div class="col-12 ms-5 ps-5">
-                    Sorry to inform you that there are no houses available for sale at the moment.
+                    {{__('ui.noArticles')}}
                 </div>
             @endforelse
             {{-- {{$articles->links()}} --}}

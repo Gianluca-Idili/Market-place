@@ -31,8 +31,8 @@
                     <div class="container-fluid">
                         <div class="row justify-content-center">
                             <div class="col-12">
-                                <h3>Non ci sono annunci.</h3>
-                                <h3>Pubblicane uno: <a class="btn btn-addArt" href="{{ route('article.create') }}">Aggiungi</a></h3>
+                                <h3>{{__('ui.noArticle')}} </h3>
+                                <h3>{{__('ui.publishArticle')}} <a class="btn btn-addArt" href="{{ route('article.create') }}">{{__('ui.add')}} </a></h3>
                             </div>
                         </div>
                     </div>

@@ -29,7 +29,7 @@
                     @csrf
                     @method('put')
                     <input type="file" name="avatar" class="form-controll">
-                    <button type="submit" class="btn btn-primary">Inserisci Immagine</button>
+                    <button type="submit" class="btn btn-primary">{{__('ui.insertImage')}}</button>
                 </form>
             </div>
         <div class="col-12 col-md-6 d-flex my-auto">
@@ -41,7 +41,7 @@
                 <ul class="dropdown-menu fs-5">
                     <li>  
                         <a class="btn btn-warning ms-4 mb-5"
-                        href="{{ route('user.edit')}}">Modifica
+                        href="{{ route('user.edit')}}">{{__('ui.edit')}}
                     </a>
                     </li>
                     <li>
@@ -51,7 +51,7 @@
                             {{-- <button type="submit" class="btn btn-danger">cancella utente
                             </button> --}}
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Cancella profilo
+                                {{__('ui.deleteProfile')}}
                             </button>
                         </form>
                     </li>
@@ -70,11 +70,11 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ $article->name }}</h5>
                     <p class="card-text">{{ Str::limit($article->body, 50) }}</p>
-                    <p>Pubblicato da:
+                    <p>{{__('ui.publishedBy')}}
                         <p class=" fw-bold fst-italic">{{ $article->user->name }}</p>
                     </p>
                     <a href="{{ route('article.show', compact('article')) }}"
-                    class="btn btn-primary me-3">Dettaglio</a>
+                    class="btn btn-primary me-3">{{__('ui.viewMore')}}</a>
                 </div>
             </div>
         </div>
@@ -91,16 +91,16 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Sei sicuro di voler cancellare il profilo?
+                {{__('ui.deleteProfile')}}
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna indietro</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.goBack')}} </button>
                 <div class="text-center col-6">
                     
                     <form method="POST" action="{{ route('user.destroy') }}">
                         @csrf
                         @method('delete')
-                        <button class="btn btn-danger" type="submit">Conferma</button>
+                        <button class="btn btn-danger" type="submit">{{__('ui.confirm')}} </button>
                     </form>
                 </div>
             </div>

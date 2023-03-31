@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-      <h1 class="text-center mt-5">Registrati</h1>
+      <h1 class="text-center mt-5">{{__('ui.register')}}</h1>
     </x-header>
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
@@ -19,12 +19,12 @@
             <form class=" shadow p-5" action="{{route('register')}}" method="POST">
                 @csrf
                 <div class="mb-3">
-                  <label for="email" class="form-label">Indirizzo e-mail</label>
+                  <label for="email" class="form-label">{{__('ui.e-mail')}} </label>
                   <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
                 
                 </div>
                 <div class="mb-3">
-                    <label for="name" class="form-label">Nome utente</label>
+                    <label for="name" class="form-label">{{__('ui.username')}} </label>
                     <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp">
                   
                   </div>
@@ -33,10 +33,10 @@
                   <input type="password"  name="password" class="form-control" id="password">
                 </div>
                 <div class="mb-3">
-                    <label for="password_confirmation" class="form-label">Conferma Password</label>
+                    <label for="password_confirmation" class="form-label">{{__('ui.confirmPass')}}</label>
                     <input type="password"  name="password_confirmation" class="form-control" id="password_confirmation">
                   </div>
-                <button type="submit" class="btn btn-warning">Registrati</button>
+                <button type="submit" class="btn btn-warning">{{__('ui.register')}} </button>
               </form>
             </div>
         </div>

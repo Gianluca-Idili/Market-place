@@ -56,10 +56,10 @@
                 <hr>
                 <div class="bg-white text-black text-end">
                     <div class="fs-3 txtMain">
-                        <p class="text-italic"><small> Caricato il :</small> {{ $article->created_at->format('d/m/Y') }}
+                        <p class="text-italic"><small>{{__('ui.uploadedOn')}} </small> {{ $article->created_at->format('d/m/Y') }}
                         </p>
                         <div class="fs-3 txtMain">
-                            <p class="text-italic"> <small> Inserito da : </small> {{ $article->user->name }}</p>
+                            <p class="text-italic"> <small> {{__('ui.insertBy'):}} </small> {{ $article->user->name }}</p>
                         </div>
                         <div class="fs-1 txtAccent">
                             <p class="mb-1 text-bold text-italic">{{ $article->price }} €</p>
@@ -71,7 +71,7 @@
 
             <div class="text-end mt-3">
                 {{-- <a class="btn btn-succes" href="">compra</a> --}}
-                <a class="btn btn-addArt" href="{{ route('article.index') }}">Torna indietro</a>
+                <a class="btn btn-addArt" href="{{ route('article.index') }}">{{__('ui.goBack')}}</a>
 
 
             </div>
