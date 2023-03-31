@@ -37,7 +37,7 @@
 
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="{{ route('revisor.form') }}" class="text-dark">Lavora con noi</a>
+                            <a href="{{ route('revisor.form') }}" class="text-dark">{{__('ui.wWu')}}</a>
                         </li>
                     </ul>
                 </div>

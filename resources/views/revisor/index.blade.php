@@ -3,7 +3,7 @@
         <div class="row justify-content-center mt-5">
             <div class="col-12 col-md-6">
                 <h1 class="text-center mt-5">
-                    {{ $article_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
+                    {{ $article_to_check ? __('ui.NewArticlesRew') : __('ui.noNewArticlesRew') }}
                     <hr>
                 </h1>
             </div>
@@ -63,14 +63,14 @@
                             method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn fs-5 btn-success">Accetta</button>
+                            <button type="submit" class="btn fs-5 btn-success">{{__('ui.accept')}}</button>
                         </form>
                         <form class="mx-5 my-5"
                             action="{{ route('revisor.reject_article', ['article' => $article_to_check]) }}"
                             method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn fs-5 btn-danger">Rifiuta</button>
+                            <button type="submit" class="btn fs-5 btn-danger">{{__('ui.reject')}}</button>
                         </form>
 
                     </div>
@@ -80,7 +80,7 @@
                         @foreach ($article_to_check->images as $image)
                             <div class="col-md-6">
                                 <div class="">
-                                    <h5 class="">Revisione immagini</h5>
+                                    <h5 class="">{{__('ui.imageReviewer')}}</h5>
                                     {{-- @dd($image->adult) --}}
                                     <p>Adulti: <span class="{{$image->adult}}"></span></p>
                                     <p>Satira: <span class="{{$image->spoof}}"></span></p>
@@ -110,7 +110,7 @@
         <div class="row justify-content-center">
             <div class="col-12 text-end">
                 <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Annulla ultima operazione
+                    {{__('ui.backLastOperation')}}
                 </button>
             </div>
 
@@ -128,14 +128,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Sei sicuro di annullare l'ultima operazione?
+                    {{__('ui.areYouSureConf')}}
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Torna indietro</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.goBack')}}</button>
                     <div class="text-center col-6">
                         <form method="POST" action="{{ route('revisor.update') }}">
                             @csrf
-                            <button class="btn btn-danger" type="submit">Conferma</button>
+                            <button class="btn btn-danger" type="submit">{{__('ui.confirm')}}</button>
                         </form>
                     </div>
                 </div>

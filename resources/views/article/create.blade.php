@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-        <h1 class="text-center mt-5 txtMain ">Inserisci qui il tuo articolo</h1>
+        <h1 class="text-center mt-5 txtMain ">{{__('ui.insertHereYourArticle')}}</h1>
     </x-header>
 
     <div class="container">

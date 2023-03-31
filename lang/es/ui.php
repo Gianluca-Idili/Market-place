@@ -21,4 +21,23 @@ return [
 'login'=>'Login',
 'profile'=>'Perfil',
 'delete'=> 'Borrar',
+'noNewArticlesRew'=> 'Noy hay articlus por revisar',
+'NewArticlesRew'=> 'Articulo por revisar',
+'backLastOperation'=> 'Deshacer la última operación',
+'accept'=> 'Aceptar',
+'reject'=> 'Rechazar',
+'imageReviewer'=> 'Revisor de imajenes',
+'confirm'=> 'Confirmar',
+'goBack'=> 'Volver atras',
+'areYouSureConf'=> 'Estas seguro de confirmar la ultima operation?',
+'insertHereYourArticle'=>' Añade aqui tu articulo',
+'name'=> 'Nombre',
+'category'=> 'Categoria',
+'price'=> 'Precio',
+'description'=> 'Description',
+'insert'=> 'Añadir',
+'selectCategory'=> 'Seleciona una categoria',
+
+
+
 ];

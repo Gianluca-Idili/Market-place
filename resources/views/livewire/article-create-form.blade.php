@@ -7,7 +7,7 @@
     <form wire:submit.prevent="store" class="shadow p-5" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
-            <label for="name" class="form-label fs-5  txtMain">Nome</label>
+            <label for="name" class="form-label fs-5  txtMain">{{__('ui.name')}}</label>
             <input type="string" wire:model.debounce.1200ms="name"
                 class="form-control @error('name') is-invalid @enderror" id="name">
             @error('name')
@@ -15,9 +15,9 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label class="txtMain fs-5">Categoria</label>
+            <label class="txtMain fs-5">{{__('ui.category')}}</label>
             <select wire:model="category_id" id="category_id">
-                <option class="txtMain " value="">Seleziona una categoria</option>
+                <option class="txtMain " value="">{{__('ui.selectCategory')}}</option>
 
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -28,7 +28,7 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="price" class="form-label fs-5 txtMain">Prezzo</label>
+            <label for="price" class="form-label fs-5 txtMain">{{__('ui.price')}}</label>
             <input type="number" wire:model="price" class="form-control @error('price') is-invalid @enderror"
                 id="price">
             @error('price')
@@ -36,7 +36,7 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="body" class="form-label fs-5 txtMain">Descrizione</label>
+            <label for="body" class="form-label fs-5 txtMain">{{__('ui.description')}}</label>
             <textarea type="text" wire:model="body" cols="30" rows="7"
                 class="form-control @error('body') is-invalid @enderror" id="body"></textarea>
             @error('body')
@@ -67,6 +67,6 @@
                 </div>
             </div>
         @endif
-        <button type="submit" class=" btn btn-addArt txtMain ">Inserisci</button>
+        <button type="submit" class=" btn btn-addArt txtMain ">{{__('ui.insert')}}</button>
     </form>
 </div>
