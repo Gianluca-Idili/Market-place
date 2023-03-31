@@ -66,7 +66,7 @@
         @foreach ($articles as $article)
         <div class="col-12 col-lg-3 my-5">
             <div class="card h-100">
-                <img src="https://picsum.photos/300" class="card-img-top img-fluid" alt="...">
+                    <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(500,500): 'https://picsum.photos/200'}}" alt="">    
                 <div class="card-body">
                     <h5 class="card-title">{{ $article->name }}</h5>
                     <p class="card-text">{{ Str::limit($article->body, 50) }}</p>
@@ -75,6 +75,8 @@
                     </p>
                     <a href="{{ route('article.show', compact('article')) }}"
                     class="btn btn-primary me-3">{{__('ui.viewMore')}}</a>
+                    <a href="{{ route('article.edit', compact('article')) }}"
+                    class="btn btn-primary me-3">Modifica</a>
                 </div>
             </div>
         </div>

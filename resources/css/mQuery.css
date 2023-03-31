@@ -39,8 +39,9 @@
 .sloganIndex{
   color: white;
   position: absolute;
-  top: 45vh;
-  left: 65vw;
+  top: 45%;
+  left: 65%;
+  width: 400px;
   
 }
 

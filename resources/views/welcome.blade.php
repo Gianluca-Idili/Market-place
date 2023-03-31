@@ -30,7 +30,7 @@
                         <div class="main-pro bg-white ">
                             <div class=" ms-1 ms-md-0 bg-white text-black body-card">
                                 <div >
-                                    <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(1000,1000): 'https://picsum.photos/200'}}" alt="">    
+                                    <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(500,500): 'https://picsum.photos/200'}}" alt="">    
                                     
                                 </div>
                                 <h3 class="mt-4 text-bold text-center">{{ $article->name }}</h3>
