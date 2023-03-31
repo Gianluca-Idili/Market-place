@@ -19,6 +19,7 @@ return [
 'mexagesNoView'=>'Mensaje no visualizado',
 'register'=>'Rejistrate',
 'login'=>'Login',
+'e-mail'=>'dirección de correo electrónico',
 'profile'=>'Perfil',
 'delete'=> 'Borrar',
 'noNewArticlesRew'=> 'Noy hay articlus por revisar',

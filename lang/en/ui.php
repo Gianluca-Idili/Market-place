@@ -28,6 +28,7 @@ return [
 'reject'=> 'Reject',
 'imageReviewer'=> 'Images reviewer',
 'confirm'=> 'Confirm',
+'e-mail'=>'E-mail adress',
 'goBack'=> 'Go Back',
 'areYouSureConf'=> 'Are you sure to confirm the last operation?',
 'insertHereYourArticle'=>' Insert your article',
