@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
@@ -64,10 +65,11 @@ class ArticleCreateForm extends Component
 
                 $watermark = public_path('media\watermark_Presto.png');
 
-
-                dispatch(new ResizeImage($newImage->path,500,500));
-                dispatch (new GoolgleVisionSafeSearch($newImage->id));
-                dispatch (new GoogleVisionLabelImage($newImage->id));
+                RemoveFaces::withChain([
+                    dispatch(new ResizeImage($newImage->path,500,500)),
+                    dispatch (new GoolgleVisionSafeSearch($newImage->id)),
+                    dispatch (new GoogleVisionLabelImage($newImage->id)),
+                ])->dispatch($newImage->id);
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
