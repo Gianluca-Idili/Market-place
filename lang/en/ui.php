@@ -61,5 +61,10 @@ return [
 'signIn'=>'Sign in',
 'ifNotReg'=>'If you are not registered',
 'insertBy'=>'Post by :',
-'uploadedOn'=>'Uploaded on :'
+'uploadedOn'=>'Uploaded on :',
+'eMail'=>'Email address',
+'contactUs'=>'Contact us',
+'insertName'=>'Insert your name',
+'insertMessage'=>'Insert your message'
+
 ];

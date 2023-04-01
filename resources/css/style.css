@@ -310,3 +310,6 @@ height: 43vh;
   height: 20vh;
 
 }
+.borderCustom{
+  border: 1px solid #fca311;
+}

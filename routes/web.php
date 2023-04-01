@@ -21,6 +21,8 @@ use GuzzleHttp\Middleware;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/categories/{category}', [PublicController::class, 'categoryShow'])->name('category.show');
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchArticles'])->name('articles.search');
+Route::get('/contact_us',[PublicController::class,'contact_us'])->name('contact_us');
+Route::post('/contact_us/submit',[PublicController::class,'contact_us_submit'])->name('contact_us_submit');
 
 
 // Rotte ricerca

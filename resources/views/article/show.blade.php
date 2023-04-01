@@ -59,7 +59,7 @@
                         <p class="text-italic"><small>{{__('ui.uploadedOn')}} </small> {{ $article->created_at->format('d/m/Y') }}
                         </p>
                         <div class="fs-3 txtMain">
-                            <p class="text-italic"> <small> {{__('ui.insertBy'):}} </small> {{ $article->user->name }}</p>
+                            <p class="text-italic"> <small> {{__('ui.insertBy')}} </small> {{ $article->user->name }}</p>
                         </div>
                         <div class="fs-1 txtAccent">
                             <p class="mb-1 text-bold text-italic">{{ $article->price }} €</p>

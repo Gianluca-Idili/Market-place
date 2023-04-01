@@ -56,11 +56,14 @@ return [
 'racy'=>'Razzismo',
 'noArticle'=>'Non ci son annunci.',
 'publishArticle'=>'Pubblicane uno:',
-'e-mail'=>'Indirizzo e-mail',
+'eMail'=>'Indirizzo e-mail',
 'username'=>'Nome utente',
 'confirmPass'=>'Conferma Password',
 'signIn'=>'Sign in',
 'ifNotReg'=>'Se non sei registrato:',
 'insertBy'=>'Inserito da :',
-'uploadedOn'=>'Caricato il :'
+'uploadedOn'=>'Caricato il :',
+'contactUs'=>'Contattaci',
+'insertName'=>'Inserisci il tuo nome',
+'insertMessage'=>'Inserisci il tuo messaggio'
 ];

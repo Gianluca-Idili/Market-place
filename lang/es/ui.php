@@ -61,7 +61,11 @@ return [
 'signIn'=>'Iniciar sesión',
 'ifNotReg'=>'Si no estás registrado:',
 'insertBy'=>'Publicado por',
-'uploadedOn'=>'Subido en :'
+'uploadedOn'=>'Subido en :',
+'eMail'=>'Dirección de correo electrónico',
+'contactUs'=>'Contáctenos',
+'insertName'=>'Inserta tu nombre',
+'insertMessage'=>'Ingrese su mensaje'
 ];
 
 

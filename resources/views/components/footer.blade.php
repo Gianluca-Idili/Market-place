@@ -39,6 +39,9 @@
                         <li>
                             <a href="{{ route('revisor.form') }}" class="text-dark">{{__('ui.wWu')}}</a>
                         </li>
+                        <li>
+                            <a href="{{route('contact_us')}}" class="text-dark">{{__('ui.contactUs')}}</a>
+                        </li>
                     </ul>
                 </div>
             </div>    

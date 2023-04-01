@@ -16,7 +16,7 @@
                     <a class="text-decoration-none" href="{{route('article.show', compact('article'))}}">
                         <div class="main-pro bg-white shadow-card">
                             <div class=" p-3 bg-white text-black body-card">
-                                <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(1000,1000): 'https://picsum.photos/200'}}" alt="">    
+                                <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(500,500): 'https://picsum.photos/200'}}" alt="">    
                                 <h3 class="mt-4 text-bold  ">{{ $article->name }}</h3>
                                 <p class="mb-1 text-bold text-italic ">{{ $article->price }} €</p>
                                 <p class="text-italic  ">{{ $article->body }}</p>

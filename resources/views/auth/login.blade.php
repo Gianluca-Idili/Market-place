@@ -2,7 +2,7 @@
     <x-header>
         <h1 class="text-center mt-5">{{__('ui.signIn')}} </h1>
     </x-header>
-    <div class="container-fluid my-5">
+    <div class="container-fluid my-5 ">
         <div class="row justify-content-center">
             <div class="col-12 col-md-4">
                 @if ($errors->any())
@@ -15,10 +15,10 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
-                <form class=" shadow p-5" action="{{ route('login') }}" method="POST">
+                <form class=" shadow p-5 borderCustom " action="{{ route('login') }}" method="POST">
                     @csrf
-                    <div class="mb-3">
-                        <label for="email" class="form-label">{{__('ui.email')}} </label>
+                    <div class="mb-3 ">
+                        <label for="email" class="form-label">{{__('ui.eMail')}} </label>
                         <input type="email" name="email" class="form-control" id="email"
                             aria-describedby="emailHelp">
 

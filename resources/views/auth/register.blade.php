@@ -16,10 +16,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 @endif
-            <form class=" shadow p-5" action="{{route('register')}}" method="POST">
+            <form class=" borderCustom shadow p-5" action="{{route('register')}}" method="POST">
                 @csrf
                 <div class="mb-3">
-                  <label for="email" class="form-label">{{__('ui.e-mail')}} </label>
+                  <label for="email" class="form-label">{{__('ui.eMail')}} </label>
                   <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
                 
                 </div>

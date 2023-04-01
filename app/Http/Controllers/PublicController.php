@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use App\Models\Article;
 use App\Models\Category;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 
 class PublicController extends Controller
@@ -28,4 +31,27 @@ class PublicController extends Controller
         session()->put('locale',$lang);
         return redirect()->back();
     }
+
+    public function contact_us(){
+        return view('contact_us');
+    }
+
+    public function contact_us_submit(Request $request ){
+        $name = $request->name;
+       $email = $request->email;
+       $message = $request->message;
+       $user_data= compact('name', 'email', 'message');
+       
+       try{
+       Mail::to($email)->send(new ContactMail($user_data));
+     } catch(Exception $e){
+        return redirect()->back()->with('emailError', 'E\' sorto un errore con l\'invio della mail, riprova più tardi');
+     }
+  
+       return redirect(route('homepage'))->with ('statusEmail','Email inviata, grazie per averci contattato');
+  
+     }
+
+
+    
 }
