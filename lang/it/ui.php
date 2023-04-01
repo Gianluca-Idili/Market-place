@@ -43,7 +43,7 @@ return [
 'publishedBy'=>' Pubblicato da:',
 'becameRevisor'=>'Facci sapere perchè vuoi diventare nostro revisore',
 'submit'=>'Invia',
-'deleteProfile'=>'Sei sicuro di voler cancellare il profilo?',
+'deleteProfile'=>'Eliminare profilo',
 'editYourProfile'=>'Modifica il tuo profilo',
 'confirmEdit'=>' Conferma le modifiche',
 'currentImg'=>'Immagini attuali',

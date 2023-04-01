@@ -24,7 +24,7 @@
 
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
+                        <label for="password" class="form-label">{{__('ui.password')}}</label>
                         <input type="password" name="password" class="form-control" id="password">
                     </div>
                     {{-- <div class="mb-3 form-check">
