@@ -26,38 +26,33 @@
     </x-header>
     
     <div class="container allArticles">
-        <div class="row">
-            <div class="col-12">
-                {{-- <p>Ecco  tutti gli annunci</p> --}}
-                <div class="row justify-content-center">
-                    {{-- <h1 class=" text-center mt-5 txtMain fw-bold">{{__('ui.lastListings')}} <hr></h1> --}}
-                    @foreach ($articles as $article)
-                    <div class="col-12 col-md-3 text-center">
-                        <div class="main-pro bg-white ">
-                            <div class=" ms-1 ms-md-0 bg-white text-black body-card">
-                                <div >
-                                    <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(500,500): 'https://picsum.photos/200'}}" alt="">    
-                                    
-                                </div>
-                                <h3 class="mt-4 text-bold text-center">{{ $article->name }}</h3>
-                                <p class="mb-1 text-bold text-italic">{{ $article->price }} €</p>
-                                <p class="text-italic">{{ Str::limit($article->body, 60) }}</p>
-                                <p>{{__('ui.categories')}} <a class="text-decoration-none text-bold"
-                                    href="{{ route('category.show', ['category' => $article->category]) }}">{{ $article->category->name }}</a>
-                                </p>
-                                <p>{{__('ui.published')}} {{ $article->created_at->format('d/m/Y') }}</p>
-                                <a class="btn btn-addArt ms-4 mb-5"
-                                href="{{ route('article.show', ['article' => $article]) }}">{{__('ui.viewMore')}}</a>
-                            </div>                           
+        <div class="row justify-content-center">
+            {{-- @foreach (Auth::user()->articles as $article) --}}
+            @foreach ($articles as $article)
+            <div class="col-12  col-lg-3 my-5 text-center ">
+                <a class=" text-decoration-none txtMain"
+                href="{{ route('article.show', compact('article')) }}">
+                <div class="h-100 ">
+                    <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(500,500): 'https://picsum.photos/200'}}" alt=""> 
+                    <div class="card-body ">
+                        <h5 class="card-title fs-2 mt-3">{{ Str::limit ($article->name, 12) }}</h5>
+                        <p class="card-title">{{ Str::limit($article->body, 30) }}</p>
+                        <p>{{__('ui.publishedBy')}} <strong>{{ $article->user->name }} </strong>
+                           
+                        </p>
+                        <div class="text-start ms-5 d-flex ps-2">
+                             <a href="{{ route('article.show', compact('article')) }}"
+                        class="btn btn-addArt mb-5 ms-2 ms-md-0">{{__('ui.viewMore')}}</a>
+                        <p class="card-text txtAccent fs-2 text-end  mt-3 mt-md-2 me-0 me-md-3 ms-5 ms-md-3 mt-2">{{($article->price) }} €</p>
                         </div>
                     </div>
-                    @endforeach
                 </div>
+                </a>
             </div>
-            
+            @endforeach
         </div>
     </div>
-    <div class="row justify-content-center">
+    {{-- <div class="row justify-content-center">
         <div class="col-1 d-flex bgAccent rounded ">
                     
                     @for ($i = 1; $i <= $articles->lastPage(); $i++)
@@ -65,10 +60,8 @@
                             <a class="text-white" href="{{ $articles->url($i) }}">{{ $i }}</a>
                         </div>
                     @endfor
-
-                    
                 </div>
-    </div>
+    </div> --}}
     
     
     

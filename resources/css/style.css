@@ -6,6 +6,7 @@
 }
 
 body {
+  overflow-x: hidden; 
   font-family: 'Padauk', sans-serif;
   color: var(--c-main);
 }

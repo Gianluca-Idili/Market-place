@@ -65,7 +65,8 @@ return [
 'eMail'=>'Dirección de correo electrónico',
 'contactUs'=>'Contáctenos',
 'insertName'=>'Inserta tu nombre',
-'insertMessage'=>'Ingrese su mensaje'
+'insertMessage'=>'Ingrese su mensaje',
+'password' => 'Contrasegna'
 ];
 
 

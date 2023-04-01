@@ -13,14 +13,26 @@
     <div class="row py-5">
         @if (count($articles))
             @forelse($articles as $article)
-                <a class="col-12 col-md-6 col-lg-3 text-center text-decoration-none txtMain my-5"
-                    href="{{ route('article.show', compact('article')) }}">
-                    <img class="customCard"  src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(500, 500) : 'https://picsum.photos/500'}}" alt="">    
-                                            
-                    <p class="text-start my-2 text-bold text-italic  fs-2 fw-bold text-center">{{ $article->price }} €</p>
-                    <h3 class="text-start  text-bold  text-center">{{ $article->name }}</h3>
-                    {{-- <p class="text-start text-italic textCard">{{ $article->body }}</p>  --}}
+            <div class="col-12  col-lg-3 my-5 text-center">
+                <a class=" text-decoration-none txtMain"
+                href="{{ route('article.show', compact('article')) }}">
+                <div class="h-100 ">
+                    <img class="customCard" src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(500,500): 'https://picsum.photos/200'}}" alt=""> 
+                    <div class="card-body ">
+                        <h5 class="card-title fs-2 mt-3">{{ Str::limit ($article->name, 12) }}</h5>
+                        <p class="card-title">{{ Str::limit($article->body, 30) }}</p>
+                        <p>{{__('ui.publishedBy')}} <strong>{{ $article->user->name }} </strong>
+                           
+                        </p>
+                        <div class="text-start ms-5 d-flex ps-2">
+                            <a href="{{ route('article.show', compact('article')) }}"
+                       class="btn btn-addArt mb-5 ms-2 ms-md-0">{{__('ui.viewMore')}}</a>
+                       <p class="card-text txtAccent fs-2 text-end  mt-3 mt-md-2 me-0 me-md-3 ms-5 ms-md-3 mt-2">{{($article->price) }} €</p>
+                       </div>
+                    </div>
+                </div>
                 </a>
+            </div>
             @empty
                 <div class="col-12 ms-5 ps-5">
                     {{__('ui.noArticles')}}

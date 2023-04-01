@@ -66,6 +66,7 @@ return [
 'eMail'=>'Email address',
 'contactUs'=>'Contact us',
 'insertName'=>'Insert your name',
-'insertMessage'=>'Insert your message'
+'insertMessage'=>'Insert your message',
+'password' => 'Password'
 
 ];

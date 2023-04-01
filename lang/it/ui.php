@@ -65,5 +65,6 @@ return [
 'uploadedOn'=>'Caricato il :',
 'contactUs'=>'Contattaci',
 'insertName'=>'Inserisci il tuo nome',
-'insertMessage'=>'Inserisci il tuo messaggio'
+'insertMessage'=>'Inserisci il tuo messaggio',
+'password' => 'Password'
 ];
