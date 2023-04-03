@@ -79,7 +79,7 @@ public function destroyFavorite(Request $request)
     * Display a listing of the resource.
     */
     public function index(){
-    $articles = DB::table('articles')->paginate(10);
+    $articles = DB::table('articles')->paginate(6);
         return view('article.index', compact('articles'));
     }
     
