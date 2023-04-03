@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Favourite;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -14,6 +17,45 @@ class ArticleController extends Controller
         $this->middleware('auth')->except('index');
     }
     
+    public function addFavorite(Request $request)
+{
+    
+    $request->validate([
+        'article_id' => 'required|exists:articles,id',
+    ]);
+
+    $user_id = Auth::id();
+    $article_id = $request->input('article_id');
+
+    $favourite = Favourite::where('user_id', $user_id)
+        ->where('article_id', $article_id)
+        ->first();
+
+    if (!$favourite) {
+        $favourite = new Favourite;
+        $favourite->user_id = $user_id;
+        $favourite->article_id = $article_id;
+        $favourite->save();
+    }
+
+    return redirect()->back()->with('message', 'Articolo aggiunto ai preferiti');
+}
+
+
+public function destroyFavorite(Request $request)
+{
+    $user_id = Auth::id();
+    $article_id = $request->input('article_id');
+    $favourite = Favourite::where('user_id', $user_id)
+        ->where('article_id', $article_id)
+        ->first();
+    // $article_id = $request->input('article_id');
+
+    $user = Auth::user();
+    // $user->favourites()->delete($article_id);
+    $favourite->delete();
+    return redirect()->back();
+}
     
     
     /**

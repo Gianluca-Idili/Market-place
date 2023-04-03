@@ -130,4 +130,39 @@
     </div>
 </div>
 {{-- end modal --}}
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <h1>Articoli preferiti</h1>
+    @if (isset($favourites) && count($favourites) > 0)
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>More Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($favourites as $favourite)
+                    @if ($favourite->user_id == auth()->id())
+                        <tr>
+                            <td>{{ $favourite->article->name }}</td>
+                            <td><a href="{{ route('article.show',  $favourite->article->id) }}">More info</a></td>
+                        </tr>
+                    @endif
+                @endforeach
+            </tbody>
+        </table>
+    @else
+        <p>Non hai articoli preferiti</p>
+    @endif
+</div>
 </x-layout>
