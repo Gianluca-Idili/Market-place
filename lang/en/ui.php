@@ -67,6 +67,8 @@ return [
 'contactUs'=>'Contact us',
 'insertName'=>'Insert your name',
 'insertMessage'=>'Insert your message',
-'password' => 'Password'
+'password' => 'Password',
+'favouritesArticle' => 'Favourite Articles',
+'annuncementRec' => 'Recent Annuncements',
 
 ];

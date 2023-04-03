@@ -83,7 +83,9 @@ height: 50vh;
 .borderCustom{
   border: 1px solid #fca311;
 }
-
+.contattaciPc{
+  display:grid;
+}
 
 
 

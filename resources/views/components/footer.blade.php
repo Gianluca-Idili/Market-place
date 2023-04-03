@@ -40,17 +40,17 @@
                             <a href="{{ route('revisor.form') }}" class="text-dark">{{__('ui.wWu')}}</a>
                         </li>
                         <li>
-                            <a href="{{route('contact_us')}}" class="text-dark">{{__('ui.contactUs')}}</a>
+                            <a href="{{route('contact_us')}}" class="text-dark contattaciPc">{{__('ui.contactUs')}}</a>
                         </li>
                     </ul>
                 </div>
             </div>    
                 <div class="row justify-content-center bgFooter ">
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-left" src="{{asset('media\Gianluca.jpeg')}}" alt=""><p class="txtMain hidden-left mt-3 fs-2 fw-bold">Gianluca</p></div>
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-left" src="{{asset('media\Armando.PNG')}}" alt=""><p class="txtMain hidden-left mt-3 fs-2 fw-bold">Armando</p></div>
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden" src="{{asset('media\Francesco.jpeg')}}" alt=""><p class="txtMain hidden mt-3 fs-2 fw-bold">Francesco</p></div>
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-right" src="{{asset('media\Eros.jpeg')}}" alt=""><p class="txtMain hidden-right mt-3 fs-2 fw-bold">Eros</p></div>
-                    <div class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-right " src="{{asset('media\Giambattista.jpeg')}}"alt=""><p class="txtMain hidden-right mt-3 fs-2 fw-bold">Giambattista</p></div>
+                    <a href="https://www.linkedin.com/in/gianluca-idili-full-stack-web-developer/" class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-left" src="{{asset('media\Gianluca.jpeg')}}" alt=""></a>
+                    <a href="https://www.linkedin.com/in/armando-detomaso-webdeveloper/" class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-left" src="{{asset('media\Armando.PNG')}}" alt=""></a>
+                    <a href="https://www.linkedin.com/in/francesco-masia-webdeveloper/" class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden" src="{{asset('media\Francesco.jpeg')}}" alt=""></a>
+                    <a href="https://www.linkedin.com/in/francesco-masia-webdeveloper/" class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-right" src="{{asset('media\Eros.jpeg')}}" alt=""></a>
+                    <a href="https://www.linkedin.com/in/giambattista-papangelo-dev/" class="col-2 col-md-2 mx-1 "><img class="fotoTeam hidden-right " src="{{asset('media\Giambattista.jpeg')}}"alt=""></a>
                 </div>
                 
                     

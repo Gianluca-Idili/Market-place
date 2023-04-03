@@ -28,30 +28,31 @@
                         <a href="{{ route('article.show', compact('article')) }}"
                         class="btn btn-addArt mb-5 ms-2 ms-md-0">{{__('ui.viewMore')}}</a>
                         <p class="card-text txtAccent fs-2 text-end  mt-3 mt-md-2 me-0 me-md-3 ms-5 ms-md-3 mt-2">{{($article->price) }} €</p>
+                           @if (Auth::check())
+                                @php
+                                    $favourite = Auth::user()->favourites()->where('article_id', $article->id)->first();
+                                @endphp
+                                @if ($favourite)
+                                    <form class="mt-3 mt-md-2 ms-3 ms-md-0 fs-2" method="POST" action="{{ route('articles.removeFavorite', ['article_id' => $article->id]) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="favorite-button active">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </form>
+                                @else
+                                    <form class="mt-3 mt-md-2 ms-3 ms-md-0" id="add-favorite-form" method="POST" action="{{ route('articles.addFavorite') }}">
+                                        @csrf
+                                        <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                        <button type="submit" class="btn btn-link" style="padding: 0;">
+                                            <i class=" text-black far fa-heart fs-2"></i>
+                                        </button>
+                                    </form>
+                                @endif
+                             @endif
                     </div>
                     
-                    @if (Auth::check())
-                    @php
-                        $favourite = Auth::user()->favourites()->where('article_id', $article->id)->first();
-                    @endphp
-                    @if ($favourite)
-                        <form method="POST" action="{{ route('articles.removeFavorite', ['article_id' => $article->id]) }}">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="favorite-button active">
-                                <span class="favorite-icon"></span>
-                            </button>
-                        </form>
-                    @else
-                        <form id="add-favorite-form" method="POST" action="{{ route('articles.addFavorite') }}">
-                            @csrf
-                            <input type="hidden" name="article_id" value="{{ $article->id }}">
-                            <button type="submit" class="btn btn-link" style="padding: 0;">
-                                <span class="favorite-icon bg-warning"></span>
-                            </button>
-                        </form>
-                    @endif
-                @endif
+ 
                 
             </div>
         </div>

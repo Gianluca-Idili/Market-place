@@ -4,7 +4,7 @@
             {{ session('articleCreated') }}
         </div>
     @endif
-    <form wire:submit.prevent="store" class="shadow p-5" enctype="multipart/form-data">
+    <form wire:submit.prevent="store" class="shadow p-5 borderCustom" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="name" class="form-label fs-5  txtMain">{{__('ui.name')}}</label>
@@ -57,7 +57,7 @@
                     <div class="row border border-4 border-info rounded shadow py-4">
                         @foreach ($images as $key => $image)
                             <div class="col my-3">
-                                <div class="img-preview mx-auto shadow rounded"
+                                <div class="img-preview mx-auto shadow rounded img-fluid"
                                     style="background-image: url({{ $image->temporaryUrl() }});"></div>
                                 <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
                                     wire:click="removeImage({{ $key }})">{{ __('ui.delete') }}</button>

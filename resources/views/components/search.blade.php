@@ -1,4 +1,5 @@
 {{-- StartSearch --}}
+
 <div class="container mt-4">
     <div class="row justify-content-center mt-3">
         <div class="col-12 col-md-8">
@@ -11,4 +12,5 @@
         </div>
     </div>
 </div>
+
 {{-- FinishSearch --}}

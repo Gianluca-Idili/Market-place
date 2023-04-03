@@ -35,6 +35,8 @@ Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name(
 
 Route::get('/article/edit/{article}', [ArticleController::class, 'edit'])->name('article.edit');
 Route::put('/article/update/{article}', [ArticleController::class, 'update'])->name('article.update');
+Route::delete('/article/destroy/{article}', [ArticleController::class, 'destroy'])->name('article.destroy');
+
 
 //UserController
 Route::get('/user/profile', [UserController::class, 'profile'])->middleware('auth')->name('user.profile');
@@ -42,6 +44,9 @@ Route::delete('/user/destroy', [UserController::class, 'destroy'])->name('user.d
 Route::get('/user/edit', [UserController::class, 'edit'])->name('user.edit');
 Route::put('/user/update', [UserController::class, 'update'])->name('user.update');
 Route::put('/user/avatar/{user}', [UserController::class, 'avatar'])->name('avatar');
+Route::get('/user/profile/preferiti', [ArticleController::class, 'preferiti'])->middleware('auth')->name('article.profilePreferiti');
+
+
 //RevisorController
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accetta/annuncio/{article}', [RevisorController::class, 'acceptArticle'])->middleware('isRevisor')->name('revisor.accept_article');
@@ -56,6 +61,6 @@ Route::post('/lingua/{lang}',[PublicController::class, 'setLanguage'])->name('se
 // TEST
 Route::post('/revisore/update',[RevisorController::class, 'update'])->name('revisor.update');
 
-//FavoritController
+//FavouritController
 Route::post('/articles/addFavorite', 'App\Http\Controllers\ArticleController@addFavorite')->name('articles.addFavorite');
 Route::delete('/articles/destroyFavorite', [ArticleController::class, 'destroyFavorite'])->name('articles.removeFavorite');

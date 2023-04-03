@@ -66,7 +66,9 @@ return [
 'contactUs'=>'Contáctenos',
 'insertName'=>'Inserta tu nombre',
 'insertMessage'=>'Ingrese su mensaje',
-'password' => 'Contrasegna'
+'password' => 'Contrasegna',
+'favouritesArticle' => 'Artículos Favoritos',
+'annuncementRec' => 'Anuncios Recientes',
 ];
 
 

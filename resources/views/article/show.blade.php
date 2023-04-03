@@ -94,6 +94,7 @@
             
 
             <div class="text-end mt-3">
+                
                 {{-- <a class="btn btn-succes" href="">compra</a> --}}
                 <a class="btn btn-addArt" href="{{ route('article.index') }}">{{__('ui.goBack')}}</a>
 

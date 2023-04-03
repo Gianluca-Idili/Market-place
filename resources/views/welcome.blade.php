@@ -3,6 +3,11 @@
     <x-search></x-search>
     {{-- <x-menuCategory/> --}}
     <x-header>
+        @if (session('articleDel'))
+        <div class="alert alert-warning">
+            {{ session('articleDel') }}
+        </div>
+        @endif
         @if (session('messageRevisor'))
         <div class="alert alert-success">
             {{ session('messageRevisor') }}
@@ -25,6 +30,16 @@
         </div>
     </x-header>
     
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h1>{{__('ui.annuncementRec')}}</h1>
+            </div>
+        </div>
+    </div>
+    
+
     <div class="container allArticles">
         <div class="row justify-content-center">
             {{-- @foreach (Auth::user()->articles as $article) --}}
@@ -43,7 +58,29 @@
                         <div class="text-start ms-5 d-flex ps-2">
                              <a href="{{ route('article.show', compact('article')) }}"
                         class="btn btn-addArt mb-5 ms-2 ms-md-0">{{__('ui.viewMore')}}</a>
-                        <p class="card-text txtAccent fs-2 text-end  mt-3 mt-md-2 me-0 me-md-3 ms-5 ms-md-3 mt-2">{{($article->price) }} €</p>
+                        <p class="card-text txtAccent fs-5 text-end  mt-3 mt-md-3 me-0 me-md-3 ms-5 ms-md-3 mt-2">{{($article->price) }} €</p>
+                        @if (Auth::check())
+                                @php
+                                    $favourite = Auth::user()->favourites()->where('article_id', $article->id)->first();
+                                @endphp
+                                @if ($favourite)
+                                    <form class="mt-2 mt-md-2 ms-3 ms-md-0 fs-2" method="POST" action="{{ route('articles.removeFavorite', ['article_id' => $article->id]) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="favorite-button active">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </form>
+                                @else
+                                    <form class="mt-2 mt-md-2 ms-3 ms-md-0" id="add-favorite-form" method="POST" action="{{ route('articles.addFavorite') }}">
+                                        @csrf
+                                        <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                        <button type="submit" class="btn btn-link" style="padding: 0;">
+                                            <i class=" text-black far fa-heart fs-2"></i>
+                                        </button>
+                                    </form>
+                                @endif
+                             @endif
                         </div>
                     </div>
                 </div>

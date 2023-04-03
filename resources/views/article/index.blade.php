@@ -4,7 +4,7 @@
     </x-header> --}}
     <x-menuCategory />
     <x-search></x-search>
-
+   
     @livewire('article-list')
 
     <div class="row justify-content-center">

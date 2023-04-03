@@ -54,7 +54,7 @@ return [
 'medical'=>'Medicina:',
 'violence'=>'Violenza:',
 'racy'=>'Razzismo',
-'noArticle'=>'Non ci son annunci.',
+'noArticle'=>'Non ci sono annunci.',
 'publishArticle'=>'Pubblicane uno:',
 'eMail'=>'Indirizzo e-mail',
 'username'=>'Nome utente',
@@ -66,5 +66,7 @@ return [
 'contactUs'=>'Contattaci',
 'insertName'=>'Inserisci il tuo nome',
 'insertMessage'=>'Inserisci il tuo messaggio',
-'password' => 'Password'
+'password' => 'Password',
+'favouritesArticle' => 'Articoli Preferiti',
+'annuncementRec' => 'Annunci Recenti',
 ];

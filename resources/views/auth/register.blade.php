@@ -36,7 +36,7 @@
                     <label for="password_confirmation" class="form-label">{{__('ui.confirmPass')}}</label>
                     <input type="password"  name="password_confirmation" class="form-control" id="password_confirmation">
                   </div>
-                <button type="submit" class="btn btn-warning">{{__('ui.register')}} </button>
+                <button type="submit" class="btn btn-addArt">{{__('ui.register')}} </button>
               </form>
             </div>
         </div>

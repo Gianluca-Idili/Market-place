@@ -1,13 +1,9 @@
 
-@font-face {
-  font-family: 'Padauk';
-  src: url('/public/fonts/Padauk-Regular.ttf') format('truetype');
-  color: var(--c-main);
-}
+
 
 body {
   overflow-x: hidden; 
-  font-family: 'Padauk', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--c-main);
 }
 hr{
@@ -168,7 +164,7 @@ hr{
       }
     .customCard{
       box-sizing: border-box;
-      width: 250px;
+      width: 300px;
       height: 370px;
       background: rgba(217, 217, 217, 0.58);
       border: 1px solid white;
@@ -315,29 +311,38 @@ height: 43vh;
   border: 1px solid #fca311;
 }
 
-#heart-icon {
-  font-size: 24px;
-  color: #ccc;
-}
-
-#heart-icon.fas {
-  color: #f00;
-}
 .favorite-button {
+  background-color: transparent;
   border: none;
-  background: url('path/to/transparent-heart-image') no-repeat;
-  width: 30px;
-  height: 30px;
   cursor: pointer;
+  padding: 0;
 }
-
-.favorite-button.active {
-  background: red;
+.fas.fa-heart {
+  fill: red; /* Cambia il colore di riempimento dell'icona quando è pieno */
+  color: red; /* Cambia il colore del testo dell'icona quando è pieno */
 }
-
 .favorite-icon {
   display: inline-block;
-  width: 100%;
-  height: 100%;
-  background: black;
+  width: 20px;
+  height: 20px;
+  font-size: 1.5rem;
+}
+
+.favorite-icon .bi-heart-fill {
+  color: red;
+}
+
+.favorite-icon .bi-heart {
+  color: black;
+}
+
+.favorite-button.active .favorite-icon .bi-heart {
+  display: none;
+}
+
+.favorite-button.active .favorite-icon .bi-heart-fill {
+  display: inline-block;
+}
+.contattaciPc{
+  display: none;
 }

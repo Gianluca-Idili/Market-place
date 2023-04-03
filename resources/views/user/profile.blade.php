@@ -94,7 +94,16 @@
                     <div class="text-start ms-5 d-flex ps-2">
                          <a href="{{ route('article.show', compact('article')) }}"
                     class="btn btn-addArt mb-5 ms-2 ms-md-0">{{__('ui.viewMore')}}</a>
-                    <p class="card-text txtAccent fs-2 text-end  mt-3 mt-md-2 me-0 me-md-3 ms-5 ms-md-3 mt-2">{{($article->price) }} €</p>
+                    <form action="{{route('article.destroy',compact('article'))}}" method="POST" class="d-inline mt-2 ms-2">
+                            @csrf
+                            @method('delete')
+                            <button class="btn btn-danger ms-5 ms-md-0 fs-5" type="submit">
+                                Elimina
+                            </button>
+                            </form>
+                    </div>
+                    <div>
+                        
                     </div>
                 </div>
             </div>
@@ -146,16 +155,16 @@
         <table>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>More Info</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($favourites as $favourite)
                     @if ($favourite->user_id == auth()->id())
                         <tr>
-                            <td>{{ $favourite->article->name }}</td>
-                            <td><a href="{{ route('article.show',  $favourite->article->id) }}">More info</a></td>
+                            <td class="mt-1 fw-bold">{{ $favourite->article->name }}</td>
+                            <td><a class="btn-addArt  text-decoration-none ms-5" href="{{ route('article.show',  $favourite->article->id) }}">More info</a></td>
                         </tr>
                     @endif
                 @endforeach

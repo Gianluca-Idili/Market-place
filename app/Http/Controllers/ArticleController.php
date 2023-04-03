@@ -2,16 +2,33 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\Favourite;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
+    public function preferiti(User $user = NULL){
+        //Primo metodo
+        // return view('profilo');
+        //Secondo metodo SFRUTTARE UNA QUERY AL DATABASE
+        if(!$user){
+            $favourites = Favourite::all();
+            $articles = Article::where('user_id',Auth::id())->orderBy('created_at', 'DESC')->get();
+        } else {
+            $articles = Article::where('user_id',$user->id)->orderBy('created_at', 'DESC')->get();
+        }
+
+        //$QUERY-->WHERE-->ORDERBY
+        return view('user.preferiti', compact('articles', 'favourites'));
+        //TUTTI I RECORD->PRENDO SOLO QUELLI DELL'UTENTE LOGGATO-->ORDINO
+    }
     public function __construct(){
         
         $this->middleware('auth')->except('index');
@@ -112,7 +129,8 @@ public function destroyFavorite(Request $request)
         */
         public function destroy(Article $article)
         {
-            //
-        }
+        $article->delete();
+        return redirect(route('homepage'))->with('articleDel', 'articolo eliminato');
     }
     
+}    
